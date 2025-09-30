@@ -1,26 +1,336 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
 body {
-  background: var(--background);
+  font-family: "LunaFont", Arial, Helvetica, sans-serif;
+}
+
+/* Fondo de cuadrícula tipo papel */
+.bg-grid {
+  background-color: #ffffff !important;
+  background-image:
+    linear-gradient(to right, rgba(0,0,0,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.06) 1px, transparent 1px) !important;
+  background-size: 60px 60px !important;
+  background-attachment: fixed;
+}
+
+/* Intro overlay del avión */
+.plane-overlay {
+  position: fixed;
+  inset: 0;
+  background: transparent; /* deja ver la cuadrícula */
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.plane-track {
+  width: 100vw;
+  height: 40vh;
+  position: relative;
+}
+
+.plane-path {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100vw;
+  height: 40vh;
+}
+
+.plane-path path {
+  stroke: #111111;
+  stroke-dasharray: 2 10;
+  stroke-width: 4px;
+  fill: none;
+  stroke-linecap: round;
+  animation: path-reveal 2.2s ease-out forwards;
+}
+
+.plane-path path.is-shadow {
+  stroke: rgba(0,0,0,0.15);
+  stroke-width: 6px;
+  filter: blur(0.2px);
+}
+
+.plane-svg {
+  width: 280px;
+  height: auto;
+  position: absolute;
+  left: -340px;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: plane-fly 2.4s ease-in-out forwards;
+}
+
+@keyframes plane-fly {
+  0% {
+    transform: translate(-20vw, -50%) rotate(-3deg);
+    opacity: 0.0;
+  }
+  10% { opacity: 1; }
+  60% {
+    transform: translate(40vw, -60%) rotate(2deg);
+  }
+  100% {
+    transform: translate(110vw, -55%) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes path-reveal {
+  0% {
+    stroke-dashoffset: 260;
+    opacity: 0;
+  }
+  10% { opacity: 1; }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+/* Lluvia de tiritas de papel (estela) */
+.paper-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.paper {
+  position: absolute;
+  width: 24px;
+  height: 8px;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.5);
+  border-radius: 2px;
+  transform-origin: center;
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,0.12));
+  animation: paper-fall 1.6s ease-in forwards, paper-tilt 1.6s ease-in-out forwards;
+}
+
+@keyframes paper-fall {
+  0% {
+    transform: translate(-10px, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% { opacity: 1; }
+  100% {
+    transform: translate(-10px, 60vh) rotate(40deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes paper-tilt {
+  0% { rotate: -8deg; }
+  50% { rotate: 6deg; }
+  100% { rotate: 18deg; }
+}
+
+/* Burbujas estilo mensaje */
+.bubble {
+  position: relative;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.bubble::after {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: -8px;
+  width: 0; height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid currentColor;
+  filter: drop-shadow(0 -1px 0 rgba(0,0,0,0.12));
+}
+
+.bubble.bubble-panel {
+  background: #ffffff;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bubble.bubble-panel::after {
+  border-bottom-color: #ffffff;
+}
+
+.bubble.bubble-purple {
+  background: #EAD8F6;
+  color: #1a1a1a;
+}
+
+.bubble.bubble-purple::after {
+  border-bottom-color: #EAD8F6;
+}
+
+/* Variante: cola a la izquierda (para mensajes junto a viñetas) */
+.bubble-left { color: transparent; }
+.bubble-left::after {
+  top: 14px;
+  left: -10px;
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-right: 10px solid currentColor;
+  border-left: none;
+  filter: drop-shadow(-1px 0 0 rgba(0,0,0,0.12));
+}
+.bubble-left.bubble-panel::after { border-right-color: #ffffff; }
+.bubble-left.bubble-purple::after { border-right-color: #EAD8F6; }
+
+/* Etiquetas con flecha (PRIMARIA, BACHILLER, UNIVERSIDAD) */
+.tag-arrow {
+  position: relative;
+  display: inline-block;
+  padding: 8px 22px;
+  background: #ffffff;
+  border: 2px solid rgba(0,0,0,0.55);
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.tag-arrow::after {
+  content: "";
+  position: absolute;
+  right: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0; height: 0;
+  border-left: 18px solid #ffffff;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  filter: drop-shadow(1px 0 0 rgba(0,0,0,0.55));
+}
+
+/* Fuente local global */
+@font-face {
+  font-family: "LunaFont";
+  src: url("/font/LunaFont.woff2") format("woff2"),
+       url("/font/LunaFont.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
