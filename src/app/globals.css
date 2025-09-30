@@ -332,6 +332,11 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+    cursor: url('/cursor.png') 16 16, auto;
+  }
+  
+  * {
+    cursor: url('/cursor.png') 16 16, auto;
   }
 }
 
@@ -346,6 +351,7 @@ body {
   filter: drop-shadow(0 2px 0 rgba(0,0,0,0.05));
   opacity: 0.6;
   animation: star-rotate 8s linear infinite;
+  z-index: 1;
 }
 
 .decor-star.sm { width: 110px; height: 110px; opacity: 0.55; }

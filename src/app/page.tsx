@@ -13,7 +13,9 @@ export default function Home() {
     <div className="min-h-screen grid place-items-center pt-28 pb-12 px-4">
       <PlaneIntro />
       {introDone && (
-      <main className="w-full max-w-4xl grid gap-10 justify-items-center">
+      <main className="w-full max-w-4xl grid gap-10 justify-items-center relative">
+        <div className="absolute -left-8 top-8 hidden md:block decor-star xs" />
+        <div className="absolute -right-6 top-16 hidden md:block decor-star sm" />
         <div className="relative w-44 h-44 rounded-md overflow-hidden border border-black/10 shadow-md">
           <span className="absolute -top-7 left-1/2 -translate-x-1/2 text-xs tracking-wide font-semibold">MI HOJA DE VIDA</span>
           <Image
@@ -35,6 +37,7 @@ export default function Home() {
         <section className="w-full pt-16 relative" aria-labelledby="edu-title">
           <div className="absolute -left-6 top-8 hidden md:block decor-star xs" />
           <div className="absolute left-12 -bottom-4 hidden md:block decor-star sm" />
+          <div className="absolute -right-8 top-16 hidden md:block decor-star xs" />
           <h2 id="edu-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black">MI FORMACION ACADEMICA</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             <div className="space-y-10">
@@ -75,6 +78,7 @@ export default function Home() {
         <section className="w-full pt-20 relative" aria-labelledby="exp-title">
           <div className="absolute -right-8 top-6 hidden md:block decor-star xs" />
           <div className="absolute right-16 -bottom-6 hidden md:block decor-star sm" />
+          <div className="absolute -left-6 top-12 hidden md:block decor-star xs" />
           <h2 id="exp-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black">MI EXPERIENCIA LABORAL</h2>
           <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 items-start">
             <div className="w-[180px] h-[180px] mx-auto md:mx-0">
@@ -89,6 +93,7 @@ export default function Home() {
         {/* Sección: Mis logros y reconocimientos */}
         <section className="w-full pt-20 relative" aria-labelledby="awards-title">
           <div className="absolute -left-8 top-10 hidden md:block decor-star xs" />
+          <div className="absolute -right-6 top-16 hidden md:block decor-star sm" />
           <div className="relative flex items-center justify-center mb-8">
             <h2 id="awards-title" className="text-center font-semibold tracking-wide uppercase text-black">MIS LOGROS Y RECONOCIMIENTOS</h2>
             <div className="absolute right-6 -top-6 hidden md:block w-25 h-25">
@@ -117,6 +122,7 @@ export default function Home() {
         {/* Sección: Mis viajes */}
         <section className="w-full pt-20 relative" aria-labelledby="trips-title">
           <div className="absolute left-6 top-10 hidden md:block decor-star" />
+          <div className="absolute -right-8 top-16 hidden md:block decor-star xs" />
           <h2 id="trips-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black">
             <a href="/viajes" className="inline-block cursor-pointer transition-transform duration-300 hover:text-purple-500 hover:rotate-3 hover:-translate-y-1 hover:scale-110">MIS VIAJES</a>
           </h2>
@@ -154,6 +160,7 @@ export default function Home() {
         <section className="w-full pt-20 relative" aria-labelledby="hobbies-title">
           <div className="absolute -right-6 top-8 hidden md:block decor-star xs" />
           <div className="absolute right-12 -bottom-4 hidden md:block decor-star sm" />
+          <div className="absolute -left-8 top-16 hidden md:block decor-star xs" />
           <h2 id="hobbies-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black">
             <a href="/pasatiempos" className="inline-block cursor-pointer transition-transform duration-300 hover:text-purple-500 hover:rotate-3 hover:-translate-y-1 hover:scale-110">MIS PASATIEMPOS</a>
           </h2>
