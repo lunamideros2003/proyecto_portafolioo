@@ -32,7 +32,9 @@ export default function Home() {
         </section>
 
         {/* Sección: Mi formación académica (mismo documento, aparece al hacer scroll) */}
-        <section className="w-full pt-16" aria-labelledby="edu-title">
+        <section className="w-full pt-16 relative" aria-labelledby="edu-title">
+          <div className="absolute -left-6 top-8 hidden md:block decor-star xs" />
+          <div className="absolute left-12 -bottom-4 hidden md:block decor-star sm" />
           <h2 id="edu-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black">MI FORMACION ACADEMICA</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             <div className="space-y-10">
@@ -70,7 +72,9 @@ export default function Home() {
         </section>
 
         {/* Sección: Mi experiencia laboral */}
-        <section className="w-full pt-20" aria-labelledby="exp-title">
+        <section className="w-full pt-20 relative" aria-labelledby="exp-title">
+          <div className="absolute -right-8 top-6 hidden md:block decor-star xs" />
+          <div className="absolute right-16 -bottom-6 hidden md:block decor-star sm" />
           <h2 id="exp-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black">MI EXPERIENCIA LABORAL</h2>
           <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 items-start">
             <div className="w-[180px] h-[180px] mx-auto md:mx-0">
@@ -83,10 +87,11 @@ export default function Home() {
         </section>
 
         {/* Sección: Mis logros y reconocimientos */}
-        <section className="w-full pt-20" aria-labelledby="awards-title">
+        <section className="w-full pt-20 relative" aria-labelledby="awards-title">
+          <div className="absolute -left-8 top-10 hidden md:block decor-star xs" />
           <div className="relative flex items-center justify-center mb-8">
             <h2 id="awards-title" className="text-center font-semibold tracking-wide uppercase text-black">MIS LOGROS Y RECONOCIMIENTOS</h2>
-            <div className="absolute right-6 -top-6 hidden md:block w-20 h-20">
+            <div className="absolute right-6 -top-6 hidden md:block w-25 h-25">
               <Image src="/quinto_anime.webp" alt="chica con diploma" width={160} height={160} className="w-full h-full object-contain" />
             </div>
           </div>
@@ -105,6 +110,70 @@ export default function Home() {
                 <p className="mt-2">la constitucion de colombia esta basada en muchos relatos artisticos como obras de arte y cosas esplendidas del mundo en el cual vamos descubriendo mas cosas nuevas</p>
                 <p className="mt-2">la constitucion de colombia esta basada en muchos relatos artisticos como obras de arte y cosas esplendidas del mundo en el cual vamos descubriendo mas cosas nuevas</p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Sección: Mis viajes */}
+        <section className="w-full pt-20 relative" aria-labelledby="trips-title">
+          <div className="absolute left-6 top-10 hidden md:block decor-star" />
+          <h2 id="trips-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black">
+            <a href="/viajes" className="inline-block cursor-pointer transition-transform duration-300 hover:text-purple-500 hover:rotate-3 hover:-translate-y-1 hover:scale-110">MIS VIAJES</a>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_260px] gap-8 items-center">
+            <ul className="space-y-8 text-black">
+              <li className="flex items-center gap-6">
+                <span className="text-xl">☆</span>
+                <span className="text-base">BRASIL</span>
+                <span className="text-2xl">🇧🇷</span>
+              </li>
+              <li className="flex items-center gap-6">
+                <span className="text-xl">☆</span>
+                <span className="text-base">PERÚ</span>
+              </li>
+              <li className="flex items-center gap-6">
+                <span className="text-xl">☆</span>
+                <span className="text-base">PARAGUAY</span>
+              </li>
+              <li className="flex items-center gap-6">
+                <span className="text-xl">☆</span>
+                <span className="text-base">CHIILE</span>
+              </li>
+              <li className="flex items-center gap-6">
+                <span className="text-xl">☆</span>
+                <span className="text-base">ECUADOR</span>
+              </li>
+            </ul>
+            <div className="w-[240px] h-[260px] mx-auto md:mx-0">
+              <Image src="/sexto_anime.webp" alt="viajes" width={360} height={380} className="w-full h-full object-contain" />
+            </div>
+          </div>
+        </section>
+
+        {/* Sección: Mis pasatiempos */}
+        <section className="w-full pt-20 relative" aria-labelledby="hobbies-title">
+          <div className="absolute -right-6 top-8 hidden md:block decor-star xs" />
+          <div className="absolute right-12 -bottom-4 hidden md:block decor-star sm" />
+          <h2 id="hobbies-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black">
+            <a href="/pasatiempos" className="inline-block cursor-pointer transition-transform duration-300 hover:text-purple-500 hover:rotate-3 hover:-translate-y-1 hover:scale-110">MIS PASATIEMPOS</a>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_260px] gap-8 items-center">
+            <ul className="space-y-8 text-black">
+              <li className="flex items-center gap-6">
+                <span className="text-xl animate-spin" style={{animationDuration: '3s'}}>☆</span>
+                <span className="text-base">LEER</span>
+              </li>
+              <li className="flex items-center gap-6">
+                <span className="text-xl animate-spin" style={{animationDuration: '3s'}}>☆</span>
+                <span className="text-base">DEPORTES</span>
+              </li>
+              <li className="flex items-center gap-6">
+                <span className="text-xl animate-spin" style={{animationDuration: '3s'}}>☆</span>
+                <span className="text-base">COCINAR</span>
+              </li>
+            </ul>
+            <div className="w-[240px] h-[260px] mx-auto md:mx-0">
+              <Image src="/septimo_anime.webp" alt="pasatiempos" width={360} height={380} className="w-full h-full object-contain" />
             </div>
           </div>
         </section>

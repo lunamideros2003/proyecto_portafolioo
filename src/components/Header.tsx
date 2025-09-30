@@ -101,21 +101,21 @@ export default function Header() {
               className="mt-3 w-80 bubble bubble-purple p-3 space-y-1 text-[15px]"
             >
               {[
-                "Formación académica",
-                "Experiencia laboral",
-                "Logros y reconocimientos",
-                "Viajes",
-                "Hobbies",
-                "Proyectos",
-                "Comentarios",
-                "Redes sociales",
-              ].map((label) => (
+                { label: "Mi formación académica", href: "#edu-title" },
+                { label: "Mi experiencia laboral", href: "#exp-title" },
+                { label: "Mis logros y reconocimientos", href: "#awards-title" },
+                { label: "Mis viajes", href: "#trips-title" },
+                { label: "Mis pasatiempos", href: "#hobbies-title" },
+                { label: "Mis proyectos", href: "#projects-title" },
+                { label: "Testimonios", href: "#testimonials-title" },
+                { label: "Mis redes sociales", href: "#social-title" },
+              ].map((item) => (
                 <a
-                  key={label}
-                  href="#"
+                  key={item.label}
+                  href={item.href}
                   className="block px-3 py-2 rounded hover:bg-black/5"
                 >
-                  {label}
+                  ☆ {item.label}
                 </a>
               ))}
             </nav>
