@@ -37,19 +37,19 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             <div className="space-y-10">
               <div className="flex items-start gap-4">
-                <span className="tag-arrow">PRIMARIA</span>
+                <span className="tag-arrow text-black">PRIMARIA</span>
                 <div className="bubble bubble-purple bubble-left px-4 py-3 text-sm max-w-[420px]">
                   la constitucion de colombia esta basada en muchos relatos artistic os como obras de arte y cosas esplendidas del mundo en el cual vamos descubriendo mas cosas nuevas
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <span className="tag-arrow">BACHILLER</span>
+                <span className="tag-arrow text-black">BACHILLER</span>
                 <div className="bubble bubble-purple bubble-left px-4 py-3 text-sm max-w-[420px]">
                   la constitucion de colombia esta basada en muchos relatos artistic os como obras de arte y cosas esplendidas del mundo en el cual vamos descubriendo mas cosas nuevas
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <span className="tag-arrow">UNIVERSIDAD</span>
+                <span className="tag-arrow text-black">UNIVERSIDAD</span>
                 <div className="bubble bubble-purple bubble-left px-4 py-3 text-sm max-w-[420px]">
                   la constitucion de colombia esta basada en muchos relatos artistic os como obras de arte y cosas esplendidas del mundo en el cual vamos descubriendo mas cosas nuevas
                 </div>
