@@ -1,26 +1,19 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-type Language = "es" | "en";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Header() {
-  const [language, setLanguage] = useState<Language>("es");
+  const { language, setLanguage, t } = useLanguage();
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
-    const storedLang = (localStorage.getItem("lang") as Language) || "es";
     const storedTheme = (localStorage.getItem("theme") as "light" | "dark") ||
       (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-    setLanguage(storedLang);
     setTheme(storedTheme);
   }, []);
-
-  useEffect(() => {
-    localStorage.setItem("lang", language);
-  }, [language]);
 
   useEffect(() => {
     const html = document.documentElement;
@@ -50,7 +43,7 @@ export default function Header() {
           }}
           className="px-4 py-2 text-base rounded-md bg-[#e9d5ff] text-[#1a1a1a] shadow-sm border border-black/10 focus:outline-none focus:ring-2 focus:ring-black/20"
         >
-          {language === "es" ? "IDIOMA" : "LANGUAGE"}
+          {t('header.language')}
         </button>
           {isLangOpen && (
           <div
@@ -91,31 +84,31 @@ export default function Header() {
                 setIsMenuOpen((o) => !o);
               }
             }}
-            className="px-4 py-2 text-base rounded-md bg-[#e9d5ff] text-[#1a1a1a] shadow-sm border border-black/10 focus:outline-none focus:ring-2 focus:ring-black/20"
-          >
-            {language === "es" ? "MENÚ" : "MENU"}
-          </button>
+          className="px-4 py-2 text-base rounded-md bg-[#e9d5ff] text-[#1a1a1a] shadow-sm border border-black/10 focus:outline-none focus:ring-2 focus:ring-black/20"
+        >
+          {t('header.menu')}
+        </button>
           {isMenuOpen && (
             <nav
               aria-label="main"
               className="mt-3 w-80 bubble bubble-purple p-3 space-y-1 text-[15px]"
             >
               {[
-                { label: "Mi formación académica", href: "#edu-title" },
-                { label: "Mi experiencia laboral", href: "#exp-title" },
-                { label: "Mis logros y reconocimientos", href: "#awards-title" },
-                { label: "Mis viajes", href: "#trips-title" },
-                { label: "Mis pasatiempos", href: "#hobbies-title" },
-                { label: "Mis proyectos", href: "#projects-title" },
-                { label: "Testimonios", href: "#testimonials-title" },
-                { label: "Mis redes sociales", href: "#social-title" },
+                { key: "menu.education", href: "#edu-title" },
+                { key: "menu.experience", href: "#exp-title" },
+                { key: "menu.awards", href: "#awards-title" },
+                { key: "menu.trips", href: "#trips-title" },
+                { key: "menu.hobbies", href: "#hobbies-title" },
+                { key: "menu.projects", href: "#projects-title" },
+                { key: "menu.testimonials", href: "#testimonials-title" },
+                { key: "menu.social", href: "#social-title" },
               ].map((item) => (
                 <a
-                  key={item.label}
+                  key={item.key}
                   href={item.href}
                   className="block px-3 py-2 rounded hover:bg-black/5"
                 >
-                  ☆ {item.label}
+                  ☆ {t(item.key)}
                 </a>
               ))}
             </nav>

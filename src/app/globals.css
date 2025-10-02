@@ -332,11 +332,40 @@ body {
   }
   body {
     @apply bg-background text-foreground;
-    cursor: url('/cursor.png') 16 16, auto;
+    cursor: url('/cursor.png') 16 16, auto !important;
   }
   
   * {
-    cursor: url('/cursor.png') 16 16, auto;
+    cursor: url('/cursor.png') 16 16, auto !important;
+  }
+  
+  a, button, input, textarea, select {
+    cursor: url('/cursor.png') 16 16, pointer !important;
+  }
+  
+  /* Forzar cursor en todos los elementos */
+  html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ul, li, section, main, header, nav {
+    cursor: url('/cursor.png') 16 16, auto !important;
+  }
+  
+  /* Responsive para móvil */
+  @media (max-width: 768px) {
+    .decor-star {
+      display: none !important;
+    }
+    
+    .bubble {
+      margin: 0 1rem;
+    }
+    
+    .tag-arrow {
+      font-size: 0.875rem;
+      padding: 4px 12px;
+    }
+    
+    .typewriter {
+      font-size: 1.25rem;
+    }
   }
 }
 
@@ -362,9 +391,37 @@ body {
   to { transform: rotate(360deg); }
 }
 
+/* Efecto hover para imágenes anime */
+.anime-hover {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.anime-hover:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1) saturate(1.2);
+}
+
 /* Animación sutil para títulos */
 .title-wiggle { position: relative; animation: title-wiggle 3s ease-in-out infinite alternate; }
 @keyframes title-wiggle {
   from { transform: translateX(0); }
   to { transform: translateX(6px); }
+}
+
+/* Efecto de escritura para títulos */
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid #000;
+  white-space: nowrap;
+  animation: typing 2s steps(20, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #000; }
 }

@@ -2,8 +2,10 @@
 import Image from "next/image";
 import PlaneIntro from "../components/PlaneIntro";
 import { useEffect, useState } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Home() {
+  const { t } = useLanguage();
   const [introDone, setIntroDone] = useState(false);
   useEffect(() => {
     const id = setTimeout(() => setIntroDone(true), 2800);
@@ -17,19 +19,19 @@ export default function Home() {
         <div className="absolute -left-8 top-8 hidden md:block decor-star xs" />
         <div className="absolute -right-6 top-16 hidden md:block decor-star sm" />
         <div className="relative w-44 h-44 rounded-md overflow-hidden border border-black/10 shadow-md">
-          <span className="absolute -top-7 left-1/2 -translate-x-1/2 text-xs tracking-wide font-semibold">MI HOJA DE VIDA</span>
+          <span className="absolute -top-7 left-1/2 -translate-x-1/2 text-xs tracking-wide font-semibold">{t('cv.title')}</span>
           <Image
             src="/yo.webp"
             alt="Foto de Luna Gabriela"
             width={640}
             height={640}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover anime-hover"
             priority
           />
         </div>
         <section className="bubble bubble-purple w-full text-center px-6 py-4" style={{color: '#1a1a1a'}}>
           <p className="leading-relaxed">
-            Me llamo Luna Gabriela tengo 22 años soy de colombia naci en pasto en estos momentos me encuentro cursando una carrera de ingeneria en software y me encuentro trabajando tengo muchas ocupaciones como hobbits adelante conoceras un pco msa de mi asi que adelante te invito a pasr
+            {t('cv.description')}
           </p>
         </section>
 
@@ -62,13 +64,13 @@ export default function Home() {
             </div>
             <div className="grid place-items-center gap-6">
               <div className="w-28 h-28">
-                <Image src="/primer_anime.webp" alt="anime 1" width={300} height={300} className="w-full h-full object-contain" />
+                <Image src="/primer_anime.webp" alt="anime 1" width={300} height={300} className="w-full h-full object-contain anime-hover" />
               </div>
               <div className="w-28 h-28">
-                <Image src="/segundo_anime.webp" alt="anime 2" width={300} height={300} className="w-full h-full object-contain" />
+                <Image src="/segundo_anime.webp" alt="anime 2" width={300} height={300} className="w-full h-full object-contain anime-hover" />
               </div>
               <div className="w-28 h-28">
-                <Image src="/tercer_anime.webp" alt="anime 3" width={300} height={300} className="w-full h-full object-contain" />
+                <Image src="/tercer_anime.webp" alt="anime 3" width={300} height={300} className="w-full h-full object-contain anime-hover" />
               </div>
             </div>
           </div>
@@ -82,7 +84,7 @@ export default function Home() {
           <h2 id="exp-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black">MI EXPERIENCIA LABORAL</h2>
           <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 items-start">
             <div className="w-[180px] h-[180px] mx-auto md:mx-0">
-              <Image src="/cuarto_anime.webp" alt="experiencia" width={360} height={360} className="w-full h-full object-contain" />
+              <Image src="/cuarto_anime.webp" alt="experiencia" width={360} height={360} className="w-full h-full object-contain anime-hover" />
             </div>
             <div className="bubble bubble-purple bubble-left px-4 py-4 text-sm leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit laoreet vestibulum. In velit felis, congue at auctor a, bibendum eu ipsum. Nam aliquet fermentum risus vel rutrum. Morbi tincidunt, magna ultricies posuere ornare, purus dolor vehicula nunc, a lacinia enim mi eu nulla. Suspendisse dapibus orci a nisl placerat, et fringilla orci tempor.
@@ -97,7 +99,7 @@ export default function Home() {
           <div className="relative flex items-center justify-center mb-8">
             <h2 id="awards-title" className="text-center font-semibold tracking-wide uppercase text-black">MIS LOGROS Y RECONOCIMIENTOS</h2>
             <div className="absolute right-6 -top-6 hidden md:block w-25 h-25">
-              <Image src="/quinto_anime.webp" alt="chica con diploma" width={160} height={160} className="w-full h-full object-contain" />
+              <Image src="/quinto_anime.webp" alt="chica con diploma" width={160} height={160} className="w-full h-full object-contain anime-hover" />
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
@@ -151,7 +153,7 @@ export default function Home() {
               </li>
             </ul>
             <div className="w-[240px] h-[260px] mx-auto md:mx-0">
-              <Image src="/sexto_anime.webp" alt="viajes" width={360} height={380} className="w-full h-full object-contain" />
+              <Image src="/sexto_anime.webp" alt="viajes" width={360} height={380} className="w-full h-full object-contain anime-hover" />
             </div>
           </div>
         </section>
@@ -180,7 +182,46 @@ export default function Home() {
               </li>
             </ul>
             <div className="w-[240px] h-[260px] mx-auto md:mx-0">
-              <Image src="/septimo_anime.webp" alt="pasatiempos" width={360} height={380} className="w-full h-full object-contain" />
+              <Image src="/septimo_anime.webp" alt="pasatiempos" width={360} height={380} className="w-full h-full object-contain anime-hover" />
+            </div>
+          </div>
+        </section>
+
+        {/* Sección: Mis proyectos */}
+        <section className="w-full pt-20 relative" aria-labelledby="projects-title">
+          <div className="absolute -left-6 top-8 hidden md:block decor-star xs" />
+          <div className="absolute -right-8 top-16 hidden md:block decor-star sm" />
+          <div className="absolute left-12 -bottom-4 hidden md:block decor-star xs" />
+          <h2 id="projects-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black">MIS PROYECTOS</h2>
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_260px] gap-8 items-start">
+            <div className="space-y-8">
+              <div className="mb-4">
+                <h3 className="text-lg font-semibold text-black mb-4">GitHub</h3>
+              </div>
+              <div className="flex items-center gap-6">
+                <span className="text-xl text-blue-400">☆</span>
+                <span className="text-base text-black">Mensajeria</span>
+                <div className="w-24 h-16 bg-purple-200 border-2 border-purple-300 flex items-center justify-center">
+                  <span className="text-purple-600 font-bold">X</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-6">
+                <span className="text-xl text-blue-400">☆</span>
+                <span className="text-base text-black">Calculadora</span>
+                <div className="w-24 h-16 bg-purple-200 border-2 border-purple-300 flex items-center justify-center">
+                  <span className="text-purple-600 font-bold">X</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-6">
+                <span className="text-xl text-blue-400">☆</span>
+                <span className="text-base text-black">kkkk</span>
+                <div className="w-24 h-16 bg-purple-200 border-2 border-purple-300 flex items-center justify-center">
+                  <span className="text-purple-600 font-bold">X</span>
+                </div>
+              </div>
+            </div>
+            <div className="w-[240px] h-[260px] mx-auto md:mx-0">
+              <Image src="/octavo_anime.webp" alt="proyectos" width={360} height={380} className="w-full h-full object-contain anime-hover" />
             </div>
           </div>
         </section>
