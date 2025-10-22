@@ -333,6 +333,7 @@ body {
   body {
     @apply bg-background text-foreground;
     cursor: url('/cursor.png') 16 16, auto !important;
+    font-family: "Delius", cursive;
   }
   
   * {

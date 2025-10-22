@@ -47,7 +47,9 @@ const translations = {
     'menu.testimonials': 'Testimonios',
     'menu.social': 'Mis redes sociales',
     'header.language': 'IDIOMA',
-    'header.menu': 'MENÚ'
+    'header.menu': 'MENÚ',
+    'testimonials.title': 'TESTIMONIOS',
+    'testimonials.description': 'la constitucion de colombia esta basada en muchos relatos artisticos como obras de arte y cosas esplendidas del mundo en el cual vamos descubriendo mas cosas nuevas'
   },
   en: {
     'cv.title': 'MY RESUME',
@@ -83,7 +85,9 @@ const translations = {
     'menu.testimonials': 'Testimonials',
     'menu.social': 'My social networks',
     'header.language': 'LANGUAGE',
-    'header.menu': 'MENU'
+    'header.menu': 'MENU',
+    'testimonials.title': 'TESTIMONIALS',
+    'testimonials.description': 'The constitution of Colombia is based on many artistic stories such as works of art and splendid things in the world in which we are discovering new things'
   }
 };
 
