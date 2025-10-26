@@ -132,19 +132,11 @@ export default function Header() {
           title={theme === "dark" ? "Modo claro" : "Modo oscuro"}
         >
           <svg viewBox="0 0 100 100" className="h-14 w-14">
-            <circle
-              cx="50"
-              cy="50"
-              r="35"
+            <polygon
+              points="50,5 60,38 95,38 66,58 77,90 50,70 23,90 34,58 5,38 40,38"
               fill="#e9d5ff"
               stroke="#1a1a1a"
               strokeWidth="2"
-            />
-            <circle
-              cx="35"
-              cy="35"
-              r="25"
-              fill="#1a1a1a"
             />
           </svg>
         </button>
