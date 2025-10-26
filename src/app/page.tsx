@@ -296,8 +296,8 @@ export default function Home() {
           rel="noopener noreferrer"
                 aria-label="Facebook"
                 title="Facebook - Luna Mideros"
-                className="absolute z-20 flex items-center justify-center cursor-pointer rounded-sm text-sm md:text-base font-semibold text-black select-none"
-                style={{ top: '44.5%', left: '33%', width: '30%', height: '8%' }}
+                className="absolute z-20 flex items-center justify-center cursor-pointer rounded-sm text-xs md:text-sm font-semibold text-black select-none bg-white/80 hover:bg-white transition-colors"
+                style={{ top: '35%', left: '45%', width: '35%', height: '6%' }}
               >
                 Luna Mideros
               </a>
@@ -309,8 +309,8 @@ export default function Home() {
           rel="noopener noreferrer"
                 aria-label="Instagram"
                 title="Instagram - Luna Mideros"
-                className="absolute z-20 flex items-center justify-center cursor-pointer rounded-sm text-sm md:text-base font-semibold text-black select-none"
-                style={{ top: '57.5%', left: '33%', width: '30%', height: '8%' }}
+                className="absolute z-20 flex items-center justify-center cursor-pointer rounded-sm text-xs md:text-sm font-semibold text-black select-none bg-white/80 hover:bg-white transition-colors"
+                style={{ top: '42%', left: '45%', width: '35%', height: '6%' }}
               >
                 Luna Mideros
               </a>
@@ -322,8 +322,8 @@ export default function Home() {
           rel="noopener noreferrer"
                 aria-label="GitHub"
                 title="GitHub - Luna Mideros"
-                className="absolute z-20 flex items-center justify-center cursor-pointer rounded-sm text-sm md:text-base font-semibold text-black select-none"
-                style={{ top: '70.5%', left: '33%', width: '30%', height: '8%' }}
+                className="absolute z-20 flex items-center justify-center cursor-pointer rounded-sm text-xs md:text-sm font-semibold text-black select-none bg-white/80 hover:bg-white transition-colors"
+                style={{ top: '49%', left: '45%', width: '35%', height: '6%' }}
               >
                 Luna Mideros
               </a>
