@@ -18,7 +18,8 @@ export default function Home() {
       <main className="w-full max-w-4xl grid gap-10 justify-items-center relative">
         <div className="absolute -left-8 top-8 hidden md:block decor-star xs" />
         <div className="absolute -right-6 top-16 hidden md:block decor-star sm" />
-        <div className="relative w-44 h-44 rounded-md overflow-hidden border border-black/10 shadow-md">
+        <div className="absolute left-12 -bottom-4 hidden md:block decor-star xs" />
+        <div className="relative w-62 h-54 rounded-md overflow-hidden border border-black/10 shadow-md">
           <span className="absolute -top-7 left-1/2 -translate-x-1/2 text-xs tracking-wide font-semibold">{t('cv.title')}</span>
         <Image
             src="/yo.webp"
@@ -42,7 +43,7 @@ export default function Home() {
           <div className="absolute -left-6 top-8 hidden md:block decor-star xs" />
           <div className="absolute left-12 -bottom-4 hidden md:block decor-star sm" />
           <div className="absolute -right-8 top-16 hidden md:block decor-star xs" />
-          <h2 id="edu-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black">{t('education.title')}</h2>
+          <h2 id="edu-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black text-3xl">{t('education.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             <div className="space-y-10">
               <div className="flex items-start gap-4">
@@ -83,7 +84,8 @@ export default function Home() {
           <div className="absolute -right-8 top-6 hidden md:block decor-star xs" />
           <div className="absolute right-16 -bottom-6 hidden md:block decor-star sm" />
           <div className="absolute -left-6 top-12 hidden md:block decor-star xs" />
-          <h2 id="exp-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black">{t('experience.title')}</h2>
+          <div className="absolute left-8 top-20 hidden md:block decor-star xs" />
+          <h2 id="exp-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black text-3xl">{t('experience.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 items-start">
             <div className="w-[180px] h-[180px] mx-auto md:mx-0">
               <Image src="/cuarto_anime.webp" alt="experiencia" width={360} height={360} className="w-full h-full object-contain anime-hover" />
@@ -98,8 +100,9 @@ export default function Home() {
         <section className="w-full pt-20 relative" aria-labelledby="awards-title">
           <div className="absolute -left-8 top-10 hidden md:block decor-star xs" />
           <div className="absolute -right-6 top-16 hidden md:block decor-star sm" />
+          <div className="absolute right-12 -bottom-4 hidden md:block decor-star xs" />
           <div className="relative flex items-center justify-center mb-8">
-            <h2 id="awards-title" className="text-center font-semibold tracking-wide uppercase text-black">{t('awards.title')}</h2>
+            <h2 id="awards-title" className="text-center font-semibold tracking-wide uppercase text-black text-3xl">{t('awards.title')}</h2>
             <div className="absolute right-6 -top-6 hidden md:block w-25 h-25">
               <Image src="/quinto_anime.webp" alt="chica con diploma" width={160} height={160} className="w-full h-full object-contain anime-hover" />
             </div>
@@ -127,7 +130,8 @@ export default function Home() {
         <section className="w-full pt-20 relative" aria-labelledby="trips-title">
           <div className="absolute left-6 top-10 hidden md:block decor-star" />
           <div className="absolute -right-8 top-16 hidden md:block decor-star xs" />
-          <h2 id="trips-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black">
+          <div className="absolute -left-6 top-20 hidden md:block decor-star sm" />
+          <h2 id="trips-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black text-3xl">
             <a href="/viajes" className="inline-block cursor-pointer transition-transform duration-300 hover:text-purple-500 hover:rotate-3 hover:-translate-y-1 hover:scale-110">{t('trips.title')}</a>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-[1fr_260px] gap-8 items-center">
@@ -159,7 +163,8 @@ export default function Home() {
           <div className="absolute -right-6 top-8 hidden md:block decor-star xs" />
           <div className="absolute right-12 -bottom-4 hidden md:block decor-star sm" />
           <div className="absolute -left-8 top-16 hidden md:block decor-star xs" />
-          <h2 id="hobbies-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black">
+          <div className="absolute left-8 top-24 hidden md:block decor-star xs" />
+          <h2 id="hobbies-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black text-3xl">
             <a href="/pasatiempos" className="inline-block cursor-pointer transition-transform duration-300 hover:text-purple-500 hover:rotate-3 hover:-translate-y-1 hover:scale-110">{t('hobbies.title')}</a>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-[1fr_260px] gap-8 items-center">
@@ -188,7 +193,8 @@ export default function Home() {
           <div className="absolute -left-6 top-8 hidden md:block decor-star xs" />
           <div className="absolute -right-8 top-16 hidden md:block decor-star sm" />
           <div className="absolute left-12 -bottom-4 hidden md:block decor-star xs" />
-          <h2 id="projects-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black">{t('projects.title')}</h2>
+          <div className="absolute right-8 top-24 hidden md:block decor-star xs" />
+          <h2 id="projects-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black text-3xl">{t('projects.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-[1fr_260px] gap-8 items-start">
             <div className="space-y-8">
               <div className="mb-4">
@@ -227,6 +233,7 @@ export default function Home() {
           <div className="absolute -left-6 top-8 hidden md:block decor-star xs" />
           <div className="absolute -right-8 top-16 hidden md:block decor-star sm" />
           <div className="absolute left-12 -bottom-4 hidden md:block decor-star xs" />
+          <div className="absolute right-8 top-24 hidden md:block decor-star xs" />
           
           {/* Título con imagen de anime pequeña */}
           <div className="flex items-center justify-center mb-8">
@@ -280,7 +287,8 @@ export default function Home() {
         <section className="w-full pt-20 relative" aria-labelledby="social-title">
           <div className="absolute -left-6 top-8 hidden md:block decor-star xs" />
           <div className="absolute -right-8 top-12 hidden md:block decor-star sm" />
-          <h2 id="social-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black">{t('menu.social')}</h2>
+          <div className="absolute left-8 top-20 hidden md:block decor-star xs" />
+          <h2 id="social-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black text-3xl">{t('menu.social')}</h2>
 
           <div className="flex justify-center">
             <div className="relative w-[320px] md:w-[360px]" style={{ aspectRatio: '360/380' }}>
