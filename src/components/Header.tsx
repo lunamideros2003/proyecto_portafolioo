@@ -147,39 +147,69 @@ export default function Header() {
         >
           <svg viewBox="0 0 100 100" className="h-14 w-14">
             {theme === "dark" ? (
-              // Icono de sol para modo oscuro
+              // Icono de sol más bonito para modo oscuro
               <g>
                 <defs>
                   <radialGradient id="sunGradient" cx="50%" cy="50%" r="50%">
                     <stop offset="0%" stopColor="#FCD34D" />
-                    <stop offset="100%" stopColor="#F59E0B" />
+                    <stop offset="70%" stopColor="#F59E0B" />
+                    <stop offset="100%" stopColor="#D97706" />
                   </radialGradient>
                 </defs>
                 <circle
                   cx="50"
                   cy="50"
-                  r="35"
+                  r="30"
                   fill="url(#sunGradient)"
                   stroke="#1a1a1a"
                   strokeWidth="2"
                 />
+                {/* Rayos del sol */}
+                <g stroke="#FCD34D" strokeWidth="3" strokeLinecap="round">
+                  <line x1="50" y1="10" x2="50" y2="5" />
+                  <line x1="70" y1="20" x2="75" y2="15" />
+                  <line x1="80" y1="40" x2="85" y2="35" />
+                  <line x1="80" y1="60" x2="85" y2="65" />
+                  <line x1="70" y1="80" x2="75" y2="85" />
+                  <line x1="50" y1="90" x2="50" y2="95" />
+                  <line x1="30" y1="80" x2="25" y2="85" />
+                  <line x1="20" y1="60" x2="15" y2="65" />
+                  <line x1="20" y1="40" x2="15" y2="35" />
+                  <line x1="30" y1="20" x2="25" y2="15" />
+                </g>
               </g>
             ) : (
-              // Icono de luna creciente elegante para modo claro
+              // Icono de luna creciente más bonito para modo claro
               <g>
                 <defs>
-                  <radialGradient id="moonGradient" cx="70%" cy="30%" r="60%">
-                    <stop offset="0%" stopColor="#F3F4F6" />
-                    <stop offset="50%" stopColor="#E5E7EB" />
-                    <stop offset="100%" stopColor="#D1D5DB" />
+                  <radialGradient id="moonGradient" cx="70%" cy="30%" r="70%">
+                    <stop offset="0%" stopColor="#F8FAFC" />
+                    <stop offset="40%" stopColor="#E2E8F0" />
+                    <stop offset="80%" stopColor="#CBD5E1" />
+                    <stop offset="100%" stopColor="#94A3B8" />
                   </radialGradient>
+                  <filter id="moonGlow">
+                    <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                    <feMerge> 
+                      <feMergeNode in="coloredBlur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
                 </defs>
                 <path
-                  d="M50 15 C35 15, 25 25, 25 40 C25 55, 35 65, 50 65 C65 65, 75 55, 75 40 C75 25, 65 15, 50 15 Z M50 20 C60 20, 70 30, 70 40 C70 50, 60 60, 50 60 C40 60, 30 50, 30 40 C30 30, 40 20, 50 20 Z"
+                  d="M50 10 C30 10, 15 25, 15 45 C15 65, 30 80, 50 80 C70 80, 85 65, 85 45 C85 25, 70 10, 50 10 Z M50 15 C65 15, 80 30, 80 45 C80 60, 65 75, 50 75 C35 75, 20 60, 20 45 C20 30, 35 15, 50 15 Z"
                   fill="url(#moonGradient)"
                   stroke="#1a1a1a"
                   strokeWidth="2"
+                  filter="url(#moonGlow)"
                 />
+                {/* Estrellas pequeñas alrededor de la luna */}
+                <g fill="#CBD5E1" opacity="0.8">
+                  <circle cx="25" cy="25" r="1.5" />
+                  <circle cx="75" cy="20" r="1" />
+                  <circle cx="20" cy="70" r="1.2" />
+                  <circle cx="80" cy="75" r="1" />
+                </g>
               </g>
             )}
           </svg>

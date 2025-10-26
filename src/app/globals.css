@@ -64,10 +64,12 @@ body {
     linear-gradient(to right, rgba(255,255,255,0.2) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255,255,255,0.2) 1px, transparent 1px),
     linear-gradient(135deg, #4B4B4B 0%, #594F80 50%, #4B4B4B 100%) !important;
-  background-size: 60px 60px, 60px 60px, cover !important;
-  background-position: 0 0, 0 0, center center !important;
-  background-attachment: fixed, fixed, fixed;
-  background-repeat: repeat, repeat, no-repeat;
+  background-size: 60px 60px, 60px 60px, 100% 100% !important;
+  background-position: 0 0, 0 0, 0 0 !important;
+  background-attachment: fixed, fixed, scroll !important;
+  background-repeat: repeat, repeat, no-repeat !important;
+  min-height: 100vh !important;
+  width: 100% !important;
 }
 
 /* Modo oscuro para burbujas de texto */
@@ -443,6 +445,30 @@ body {
     
     .typewriter {
       font-size: 1.25rem;
+    }
+    
+    /* Asegurar que el fondo cubra toda la pantalla en móvil */
+    .bg-grid {
+      min-height: 100vh !important;
+      min-height: 100dvh !important; /* Dynamic viewport height para móvil */
+      width: 100vw !important;
+      overflow-x: hidden !important;
+    }
+    
+    .dark .bg-grid {
+      min-height: 100vh !important;
+      min-height: 100dvh !important;
+      width: 100vw !important;
+      overflow-x: hidden !important;
+    }
+    
+    /* Ajustar el layout principal para móvil */
+    body {
+      overflow-x: hidden !important;
+    }
+    
+    html {
+      overflow-x: hidden !important;
     }
   }
 }
