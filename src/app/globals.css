@@ -435,12 +435,21 @@ body {
     }
     
     .bubble {
-      margin: 0 1rem;
+      margin: 0 0.5rem;
+      padding: 0.75rem;
+      max-width: calc(100vw - 2rem) !important;
+    }
+    
+    .bubble-purple {
+      margin: 0 0.5rem;
+      padding: 0.75rem;
+      max-width: calc(100vw - 2rem) !important;
     }
     
     .tag-arrow {
-      font-size: 0.875rem;
-      padding: 4px 12px;
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      margin-bottom: 0.5rem;
     }
     
     .typewriter {
@@ -469,6 +478,57 @@ body {
     
     html {
       overflow-x: hidden !important;
+    }
+    
+    /* Ajustar tamaños de imágenes en móvil */
+    .w-40.h-40 {
+      width: 8rem !important;
+      height: 8rem !important;
+    }
+    
+    /* Ajustar espaciado en móvil */
+    .space-y-10 > * + * {
+      margin-top: 1.5rem !important;
+    }
+    
+    /* Ajustar padding del contenedor principal */
+    .px-4 {
+      padding-left: 0.75rem !important;
+      padding-right: 0.75rem !important;
+    }
+  }
+  
+  /* Responsive para pantallas muy pequeñas (320px) */
+  @media (max-width: 480px) {
+    .bubble {
+      margin: 0 0.25rem;
+      padding: 0.5rem;
+      max-width: calc(100vw - 1rem) !important;
+    }
+    
+    .bubble-purple {
+      margin: 0 0.25rem;
+      padding: 0.5rem;
+      max-width: calc(100vw - 1rem) !important;
+    }
+    
+    .tag-arrow {
+      font-size: 0.625rem;
+      padding: 2px 6px;
+    }
+    
+    .w-40.h-40 {
+      width: 6rem !important;
+      height: 6rem !important;
+    }
+    
+    .px-4 {
+      padding-left: 0.5rem !important;
+      padding-right: 0.5rem !important;
+    }
+    
+    h2 {
+      font-size: 1.5rem !important;
     }
   }
 }

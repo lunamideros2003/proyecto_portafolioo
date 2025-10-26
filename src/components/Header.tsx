@@ -42,7 +42,7 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 flex items-start justify-between p-6">
+    <header className="fixed top-0 left-0 right-0 z-40 flex items-start justify-between p-3 md:p-6">
       {/* Selector de idioma */}
       <div className="relative">
         <button
@@ -55,7 +55,7 @@ export default function Header() {
               setIsLangOpen((o) => !o);
             }
           }}
-          className="px-4 py-2 text-base rounded-md bg-[#e9d5ff] text-[#1a1a1a] shadow-sm border border-black/10 focus:outline-none focus:ring-2 focus:ring-black/20"
+          className="px-3 py-2 text-sm md:text-base rounded-md bg-[#e9d5ff] text-[#1a1a1a] shadow-sm border border-black/10 focus:outline-none focus:ring-2 focus:ring-black/20"
         >
           {t('header.language')}
         </button>
@@ -87,7 +87,7 @@ export default function Header() {
           </div>
         )}
         {/* Botón de menú debajo del de idioma */}
-        <div className="mt-4">
+        <div className="mt-2 md:mt-4">
           <button
             aria-haspopup="menu"
             aria-expanded={isMenuOpen}
@@ -98,7 +98,7 @@ export default function Header() {
                 setIsMenuOpen((o) => !o);
               }
             }}
-          className="px-4 py-2 text-base rounded-md bg-[#e9d5ff] text-[#1a1a1a] shadow-sm border border-black/10 focus:outline-none focus:ring-2 focus:ring-black/20"
+          className="px-3 py-2 text-sm md:text-base rounded-md bg-[#e9d5ff] text-[#1a1a1a] shadow-sm border border-black/10 focus:outline-none focus:ring-2 focus:ring-black/20"
         >
           {t('header.menu')}
         </button>
@@ -142,10 +142,10 @@ export default function Header() {
               toggleTheme();
             }
           }}
-          className="h-16 w-16 grid place-items-center text-[#1a1a1a] dark:text-[#F3F4F6]"
+          className="h-12 w-12 md:h-16 md:w-16 grid place-items-center text-[#1a1a1a] dark:text-[#F3F4F6]"
           title={theme === "dark" ? "Modo claro" : "Modo oscuro"}
         >
-          <svg viewBox="0 0 100 100" className="h-14 w-14">
+          <svg viewBox="0 0 100 100" className="h-10 w-10 md:h-14 md:w-14">
             {theme === "dark" ? (
               // Icono de sol más bonito para modo oscuro
               <g>
