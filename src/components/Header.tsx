@@ -107,6 +107,7 @@ export default function Header() {
                   key={item.key}
                   href={item.href}
                   className="block px-3 py-2 rounded hover:bg-black/5"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   ☆ {t(item.key)}
                 </a>
@@ -116,7 +117,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Botón de tema (estrella) */}
+      {/* Botón de tema (luna) */}
       <div className="relative">
         <button
           aria-label="Cambiar tema"
@@ -131,13 +132,20 @@ export default function Header() {
           title={theme === "dark" ? "Modo claro" : "Modo oscuro"}
         >
           <svg viewBox="0 0 100 100" className="h-14 w-14">
-            <polygon
-              points="50,5 60,38 95,38 66,58 77,90 50,70 23,90 34,58 5,38 40,38"
+            <circle
+              cx="50"
+              cy="50"
+              r="35"
               fill="#e9d5ff"
               stroke="#1a1a1a"
               strokeWidth="2"
             />
-            <text x="50" y="60" textAnchor="middle" fontSize="14" fill="#1a1a1a">{theme === "dark" ? "light" : "mood"}</text>
+            <circle
+              cx="35"
+              cy="35"
+              r="25"
+              fill="#1a1a1a"
+            />
           </svg>
         </button>
       </div>

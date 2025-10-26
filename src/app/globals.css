@@ -57,6 +57,16 @@ body {
   background-attachment: fixed;
 }
 
+/* Fondo oscuro para modo dark */
+.dark .bg-grid {
+  background-color: #1a1a1a !important;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px) !important;
+  background-size: 60px 60px !important;
+  background-attachment: fixed;
+}
+
 /* Intro overlay del avión */
 .plane-overlay {
   position: fixed;
