@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
 import { LanguageProvider } from "../contexts/LanguageContext";
+import ClientLayout from "../components/ClientLayout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,15 +26,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <LanguageProvider>
-          <div className="bg-grid min-h-screen relative">
-            <Header />
-            {children}
-          </div>
+          <ClientLayout>
+            <div className="bg-grid min-h-screen relative">
+              <Header />
+              {children}
+            </div>
+          </ClientLayout>
         </LanguageProvider>
       </body>
     </html>
