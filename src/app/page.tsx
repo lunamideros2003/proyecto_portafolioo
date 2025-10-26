@@ -31,7 +31,7 @@ export default function Home() {
         />
         </div>
         <section className="bubble bubble-purple w-full text-center px-6 py-4" style={{color: '#1a1a1a'}}>
-          <p className="leading-relaxed">
+          <p className="leading-relaxed text-base">
             {t('cv.description')}
           </p>
         </section>
@@ -48,20 +48,20 @@ export default function Home() {
             <div className="space-y-10">
               <div className="flex items-start gap-4">
                 <span className="tag-arrow text-black">{t('education.primary')}</span>
-                <div className="bubble bubble-purple bubble-left px-4 py-3 text-sm max-w-[420px]">
-                  {t('education.description')}
+                <div className="bubble bubble-purple bubble-left px-4 py-3 text-base max-w-[420px]">
+                  {t('education.primary.description')}
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <span className="tag-arrow text-black">{t('education.secondary')}</span>
-                <div className="bubble bubble-purple bubble-left px-4 py-3 text-sm max-w-[420px]">
-                  {t('education.description')}
+                <div className="bubble bubble-purple bubble-left px-4 py-3 text-base max-w-[420px]">
+                  {t('education.secondary.description')}
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <span className="tag-arrow text-black">{t('education.university')}</span>
-                <div className="bubble bubble-purple bubble-left px-4 py-3 text-sm max-w-[420px]">
-                  {t('education.description')}
+                <div className="bubble bubble-purple bubble-left px-4 py-3 text-base max-w-[420px]">
+                  {t('education.university.description')}
                 </div>
               </div>
             </div>
@@ -90,7 +90,7 @@ export default function Home() {
             <div className="w-[180px] h-[180px] mx-auto md:mx-0">
               <Image src="/cuarto_anime.webp" alt="experiencia" width={360} height={360} className="w-full h-full object-contain anime-hover" />
             </div>
-            <div className="bubble bubble-purple bubble-left px-4 py-4 text-sm leading-relaxed">
+            <div className="bubble bubble-purple bubble-left px-4 py-4 text-base leading-relaxed">
               {t('experience.description')}
             </div>
           </div>
@@ -117,10 +117,8 @@ export default function Home() {
               </div>
             </div>
             <div className="md:col-span-2">
-              <div className="bubble bubble-purple px-4 py-4 text-sm leading-relaxed">
+              <div className="bubble bubble-purple px-4 py-4 text-base leading-relaxed">
                 <p>{t('awards.description')}</p>
-                <p className="mt-2">{t('awards.description')}</p>
-                <p className="mt-2">{t('awards.description')}</p>
               </div>
             </div>
           </div>
