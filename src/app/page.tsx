@@ -30,7 +30,7 @@ export default function Home() {
           priority
         />
         </div>
-        <section className="bubble bubble-purple w-full text-center px-6 py-4" style={{color: '#1a1a1a'}}>
+        <section className="bubble bubble-purple w-full text-center px-6 py-4">
           <p className="leading-relaxed text-base">
             {t('cv.description')}
           </p>

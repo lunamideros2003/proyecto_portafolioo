@@ -142,16 +142,46 @@ export default function Header() {
               toggleTheme();
             }
           }}
-          className="h-16 w-16 grid place-items-center text-[#1a1a1a]"
+          className="h-16 w-16 grid place-items-center text-[#1a1a1a] dark:text-[#F3F4F6]"
           title={theme === "dark" ? "Modo claro" : "Modo oscuro"}
         >
           <svg viewBox="0 0 100 100" className="h-14 w-14">
-            <polygon
-              points="50,5 60,38 95,38 66,58 77,90 50,70 23,90 34,58 5,38 40,38"
-              fill="#e9d5ff"
-              stroke="#1a1a1a"
-              strokeWidth="2"
-            />
+            {theme === "dark" ? (
+              // Icono de sol para modo oscuro
+              <g>
+                <defs>
+                  <radialGradient id="sunGradient" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stopColor="#FCD34D" />
+                    <stop offset="100%" stopColor="#F59E0B" />
+                  </radialGradient>
+                </defs>
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="35"
+                  fill="url(#sunGradient)"
+                  stroke="#1a1a1a"
+                  strokeWidth="2"
+                />
+              </g>
+            ) : (
+              // Icono de luna creciente elegante para modo claro
+              <g>
+                <defs>
+                  <radialGradient id="moonGradient" cx="70%" cy="30%" r="60%">
+                    <stop offset="0%" stopColor="#F3F4F6" />
+                    <stop offset="50%" stopColor="#E5E7EB" />
+                    <stop offset="100%" stopColor="#D1D5DB" />
+                  </radialGradient>
+                </defs>
+                <path
+                  d="M50 15 C35 15, 25 25, 25 40 C25 55, 35 65, 50 65 C65 65, 75 55, 75 40 C75 25, 65 15, 50 15 Z M50 20 C60 20, 70 30, 70 40 C70 50, 60 60, 50 60 C40 60, 30 50, 30 40 C30 30, 40 20, 50 20 Z"
+                  fill="url(#moonGradient)"
+                  stroke="#1a1a1a"
+                  strokeWidth="2"
+                />
+              </g>
+            )}
           </svg>
         </button>
       </div>

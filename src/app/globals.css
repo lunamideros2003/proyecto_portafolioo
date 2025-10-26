@@ -70,6 +70,70 @@ body {
   background-repeat: repeat, repeat, no-repeat;
 }
 
+/* Modo oscuro para burbujas de texto */
+.dark .bubble-purple {
+  background-color: #8B5CF6 !important; /* Morado más oscuro */
+  border-color: #7C3AED !important;
+  color: #F3F4F6 !important; /* Texto claro en modo oscuro */
+}
+
+/* Modo oscuro para botones del header */
+.dark .bg-\[#e9d5ff\] {
+  background-color: #6B46C1 !important; /* Morado más oscuro para botones */
+  color: #F3F4F6 !important; /* Texto más claro */
+}
+
+/* Modo oscuro para tags de flecha */
+.dark .tag-arrow {
+  background-color: #6B46C1 !important;
+  color: #F3F4F6 !important;
+  border-color: #7C3AED !important;
+}
+
+/* Modo oscuro para títulos */
+.dark h1,
+.dark h2,
+.dark h3 {
+  color: #F3F4F6 !important;
+}
+
+/* Modo oscuro para texto general */
+.dark p,
+.dark span {
+  color: #E5E7EB !important;
+}
+
+/* Modo oscuro para enlaces */
+.dark a {
+  color: #93C5FD !important;
+}
+
+.dark a:hover {
+  color: #60A5FA !important;
+}
+
+/* Modo oscuro para elementos específicos del portafolio */
+.dark .bubble {
+  background-color: #8B5CF6 !important;
+  color: #F3F4F6 !important;
+}
+
+.dark .bubble-left {
+  background-color: #8B5CF6 !important;
+  color: #F3F4F6 !important;
+}
+
+/* Modo oscuro para texto dentro de burbujas */
+.dark .bubble p,
+.dark .bubble-purple p {
+  color: #F3F4F6 !important;
+}
+
+/* Modo oscuro para texto de descripción */
+.dark [style*="color: #1a1a1a"] {
+  color: #F3F4F6 !important;
+}
+
 /* Intro overlay del avión */
 .plane-overlay {
   position: fixed;
