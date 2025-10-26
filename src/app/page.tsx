@@ -19,8 +19,8 @@ export default function Home() {
         <div className="absolute -left-8 top-8 hidden md:block decor-star xs" />
         <div className="absolute -right-6 top-16 hidden md:block decor-star sm" />
         <div className="absolute left-12 -bottom-4 hidden md:block decor-star xs" />
+        <h2 className="text-center font-semibold tracking-wide mb-8 uppercase text-black text-3xl">{t('cv.title')}</h2>
         <div className="relative w-62 h-54 rounded-md overflow-hidden border border-black/10 shadow-md">
-          <span className="absolute -top-7 left-1/2 -translate-x-1/2 text-xs tracking-wide font-semibold">{t('cv.title')}</span>
         <Image
             src="/yo.webp"
             alt="Foto de Luna Gabriela"

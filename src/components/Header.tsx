@@ -8,6 +8,7 @@ export default function Header() {
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const storedTheme = (localStorage.getItem("theme") as "light" | "dark") ||
@@ -25,7 +26,20 @@ export default function Header() {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
+  useEffect(() => {
+    // Mostrar el header después de que termine la animación del avión (2.8 segundos)
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 2800);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
   const toggleTheme = () => setTheme((t) => (t === "dark" ? "light" : "dark"));
+
+  if (!isVisible) {
+    return null;
+  }
 
   return (
     <header className="fixed top-0 left-0 right-0 z-40 flex items-start justify-between p-6">
