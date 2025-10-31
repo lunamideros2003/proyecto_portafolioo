@@ -285,8 +285,8 @@ export default function Home() {
           <h2 id="social-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black text-3xl">{t('menu.social')}</h2>
 
           <div className="flex justify-center">
-            <div className="relative w-[320px] md:w-[360px]" style={{ aspectRatio: '360/380' }}>
-              <Image src="/decimo_anime.webp" alt="redes sociales" width={360} height={380} className="w-full h-full object-contain select-none pointer-events-none" />
+            <div className="relative w-[420px] md:w-[520px]" style={{ aspectRatio: '360/380' }}>
+              <Image src="/decimo_anime.webp?v=3" alt="redes sociales" width={520} height={550} className="w-full h-full object-contain select-none pointer-events-none" />
 
               {/* Hotspots visibles al hover (sobrepuestos) */}
               {/* Facebook */}
@@ -297,7 +297,7 @@ export default function Home() {
                 aria-label="Facebook"
                 title="Facebook - Luna Mideros"
                 className="absolute z-20 flex items-center justify-center cursor-pointer rounded-sm text-xs md:text-sm font-semibold text-black select-none bg-white/80 hover:bg-white transition-colors"
-                style={{ top: '35%', left: '30%', width: '35%', height: '6%' }}
+                style={{ top: '35%', left: '45%', width: '35%', height: '6%' }}
               >
                 Luna Mideros
               </a>
