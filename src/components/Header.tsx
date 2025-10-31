@@ -1,14 +1,19 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Header() {
   const { language, setLanguage, t } = useLanguage();
+  const pathname = usePathname();
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [isVisible, setIsVisible] = useState(false);
+
+  // Ocultar header en páginas de viajes y pasatiempos
+  const shouldHideHeader = pathname === "/viajes" || pathname === "/pasatiempos";
 
   useEffect(() => {
     const storedTheme = (localStorage.getItem("theme") as "light" | "dark") ||
@@ -36,6 +41,11 @@ export default function Header() {
   }, []);
 
   const toggleTheme = () => setTheme((t) => (t === "dark" ? "light" : "dark"));
+
+  // No mostrar header en páginas de viajes y pasatiempos
+  if (shouldHideHeader) {
+    return null;
+  }
 
   if (!isVisible) {
     return null;
