@@ -18,7 +18,7 @@ export default function BackButton() {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="w-7 h-7 md:w-8 md:h-8"
+          className="w-9 h-9 md:w-9 md:h-9"
         >
           <path d="M19 12H5M12 19l-7-7 7-7" />
         </svg>
