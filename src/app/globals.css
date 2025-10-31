@@ -427,21 +427,7 @@ body {
   }
   body {
     @apply bg-background text-foreground;
-    cursor: url('/cursor.png') 16 16, auto !important;
     font-family: "Delius", cursive;
-  }
-  
-  * {
-    cursor: url('/cursor.png') 16 16, auto !important;
-  }
-  
-  a, button, input, textarea, select {
-    cursor: url('/cursor.png') 16 16, pointer !important;
-  }
-  
-  /* Forzar cursor en todos los elementos */
-  html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ul, li, section, main, header, nav {
-    cursor: url('/cursor.png') 16 16, auto !important;
   }
   
   /* Responsive para móvil */

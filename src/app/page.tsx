@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import PlaneIntro from "../components/PlaneIntro";
+import CursorPencilEffect from "../components/CursorPencilEffect";
 import { useEffect, useState } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 
@@ -13,6 +14,7 @@ export default function Home() {
   }, []);
   return (
     <div className="min-h-screen grid place-items-center pt-28 pb-12 px-4">
+      <CursorPencilEffect />
       <PlaneIntro />
       {introDone && (
       <main className="w-full max-w-4xl grid gap-10 justify-items-center relative">
@@ -89,6 +91,7 @@ export default function Home() {
             <div className="bubble bubble-purple bubble-left px-4 py-4 text-base leading-relaxed">
               {t('experience.description')}
             </div>
+            
           </div>
         </section>
 
