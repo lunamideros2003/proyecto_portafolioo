@@ -12,7 +12,7 @@ export default function BackButton() {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
+          viewBox="0 0 26 24"
           fill="none"
           stroke="#000000"   // ← flecha negra fija
           strokeWidth="2"
@@ -20,7 +20,7 @@ export default function BackButton() {
           strokeLinejoin="round"
           className="w-9 h-9 md:w-9 md:h-9"
         >
-          <path d="M19 12H5M12 19l-7-7 7-7" />
+          <path d="M25 12H5M12 19l-7-7 7-7" />
         </svg>
 
       </Link>
