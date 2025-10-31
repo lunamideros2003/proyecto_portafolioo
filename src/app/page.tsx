@@ -323,7 +323,7 @@ export default function Home() {
                 aria-label="GitHub"
                 title="GitHub - Luna Mideros"
                 className="absolute z-20 flex items-center justify-center cursor-pointer rounded-sm text-xs md:text-sm font-semibold text-black select-none bg-white/80 hover:bg-white transition-colors"
-                style={{ top: '50%', left: '45%', width: '35%', height: '6%' }}
+                style={{ top: '37%', left: '40%', width: '35%', height: '6%' }}
               >
                 Luna Mideros
               </a>
