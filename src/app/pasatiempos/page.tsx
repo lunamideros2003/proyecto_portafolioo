@@ -18,8 +18,8 @@ export default function PasatiemposPage() {
   // 📝 Texto que cambia con cada imagen (usando los primeros 6 textos del código proporcionado)
   const texts = [
     {
-      title: "Diseño y creatividad visual",
-      description: "Fusionamos el arte con la tecnología para crear imágenes que cuentan historias únicas.",
+      title: "Futbol ⚽",
+      description: "Este es el deporte que mas me encanta, lo he practicado por dos años tanto micro futbol como futbol, lo he entrenado en escuelas, colegios y clubs de entrenamiento.",
     },
     {
       title: "Innovación moderna",
