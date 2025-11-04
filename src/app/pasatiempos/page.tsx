@@ -68,6 +68,15 @@ export default function PasatiemposPage() {
     <>
       <BackButton />
       <section className="py-20 relative overflow-hidden min-h-screen">
+        {/* Estrellas decorativas */}
+        <div className="absolute -left-8 top-8 hidden md:block decor-star xs" />
+        <div className="absolute -right-6 top-16 hidden md:block decor-star sm" />
+        <div className="absolute left-12 top-32 hidden md:block decor-star xs" />
+        <div className="absolute -right-12 top-48 hidden md:block decor-star xs" />
+        <div className="absolute left-8 bottom-32 hidden md:block decor-star sm" />
+        <div className="absolute -right-8 bottom-24 hidden md:block decor-star xs" />
+        <div className="absolute left-16 bottom-48 hidden md:block decor-star xs" />
+        
         <div className="container mx-auto px-6 pt-20">
           <h1 className="text-center font-semibold tracking-wide uppercase text-black text-3xl mb-12">
             MIS PASATIEMPOS
@@ -118,7 +127,7 @@ export default function PasatiemposPage() {
                         <img
                           src={img}
                           alt={`Foto de pasatiempo ${index + 1}`}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-contain"
                         />
                       </div>
                     </div>
