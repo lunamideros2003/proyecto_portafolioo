@@ -22,16 +22,16 @@ export default function PasatiemposPage() {
       description: "Este es el deporte que mas me encanta, lo he practicado por dos años tanto micro futbol como futbol, lo he entrenado en escuelas, colegios y clubs de entrenamiento.",
     },
     {
-      title: "Innovación moderna",
-      description: "Exploramos nuevas herramientas digitales para dar vida a ideas con impacto visual.",
+      title: "Baloncesto 🏀",
+      description: "Este deporte lo empece a practicar por mi hermana ya que le gustaba mucho y yo la acompañaba a jugar, hasta que le cogi el gusto y lo entrene por 8 meses.",
     },
     {
-      title: "Fotografía digital",
-      description: "Cada imagen captura la esencia del momento, cuidando cada detalle de luz y composición.",
+      title: "Natacion 🤿",
+      description: "Este deporte fue el que menos tiempo practique, lo practique por 4 meses en una escuela donde concursaba en carreras .",
     },
     {
-      title: "Estilo minimalista",
-      description: "Menos es más: apostamos por la elegancia, la limpieza visual y el equilibrio de formas.",
+      title: "Atletismo 👟",
+      description: "Este deporte lo practique en mi colegio fue por un año donde participe en carreras intercolegiales.",
     },
     {
       title: "Inspiración natural",
