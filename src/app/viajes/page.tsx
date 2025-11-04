@@ -7,38 +7,38 @@ import CursorPencilEffect from "../../components/CursorPencilEffect";
 export default function ViajesPage() {
   // 🖼️ Lista de 10 imágenes en el orden especificado
   const images = [
-    "/viajes/brasil.webp",
-    "/viajes/brasil_dos.webp",
-    "/viajes/chile.webp",
-    "/viajes/chile_dos.webp",
     "/viajes/ecuador.webp",
     "/viajes/ecuador_dos.webp",
-    "/viajes/paraguay.webp",
-    "/viajes/paraguay_dos.webp",
     "/viajes/peru.webp",
     "/viajes/peru_dos.webp",
+    "/viajes/chile.webp",
+    "/viajes/chile_dos.webp",
+    "/viajes/paraguay.webp",
+    "/viajes/paraguay_dos.webp",
+    "/viajes/brasil.webp",
+    "/viajes/brasil_dos.webp",
   ];
 
   // ✨ Textos que cambiarán cada 2 fotos (5 textos iguales por ahora)
   const texts = [
     {
-      title: "Mis Viajes",
+      title: "Ecuador",
       description: "Había una vez una niña muy dulce y amable que vivía en un pequeño pueblo. Su abuela le había hecho una capita roja con capucha, y como la usaba todo el tiempo, todos la llamaban Caperucita Roja. Un día, su mamá le dijo: —Caperucita, tu abuela está enferma. Llévale esta cesta con pan, miel y frutas, pero no te detengas en el camino.",
     },
     {
-      title: "Mis Viajes",
+      title: "Peru",
       description: "Había una vez una niña muy dulce y amable que vivía en un pequeño pueblo. Su abuela le había hecho una capita roja con capucha, y como la usaba todo el tiempo, todos la llamaban Caperucita Roja. Un día, su mamá le dijo: —Caperucita, tu abuela está enferma. Llévale esta cesta con pan, miel y frutas, pero no te detengas en el camino.",
     },
     {
-      title: "Mis Viajes",
+      title: "Chile",
       description: "Había una vez una niña muy dulce y amable que vivía en un pequeño pueblo. Su abuela le había hecho una capita roja con capucha, y como la usaba todo el tiempo, todos la llamaban Caperucita Roja. Un día, su mamá le dijo: —Caperucita, tu abuela está enferma. Llévale esta cesta con pan, miel y frutas, pero no te detengas en el camino.",
     },
     {
-      title: "Mis Viajes",
+      title: "Paraguay",
       description: "Había una vez una niña muy dulce y amable que vivía en un pequeño pueblo. Su abuela le había hecho una capita roja con capucha, y como la usaba todo el tiempo, todos la llamaban Caperucita Roja. Un día, su mamá le dijo: —Caperucita, tu abuela está enferma. Llévale esta cesta con pan, miel y frutas, pero no te detengas en el camino.",
     },
     {
-      title: "Mis Viajes",
+      title: "Brasil",
       description: "Había una vez una niña muy dulce y amable que vivía en un pequeño pueblo. Su abuela le había hecho una capita roja con capucha, y como la usaba todo el tiempo, todos la llamaban Caperucita Roja. Un día, su mamá le dijo: —Caperucita, tu abuela está enferma. Llévale esta cesta con pan, miel y frutas, pero no te detengas en el camino.",
     },
   ];
