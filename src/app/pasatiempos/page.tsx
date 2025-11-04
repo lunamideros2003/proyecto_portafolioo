@@ -13,6 +13,8 @@ export default function PasatiemposPage() {
     "/pasatiempos/atletismo.webp",
     "/pasatiempos/patinaje.webp",
     "/pasatiempos/voley.webp",
+    "/pasatiempos/leer.webp",
+    "/pasatiempos/cocinar.webp",
   ];
 
   // 📝 Texto que cambia con cada imagen (usando los primeros 6 textos del código proporcionado)
@@ -34,12 +36,20 @@ export default function PasatiemposPage() {
       description: "Este deporte lo practique en mi colegio fue por un año donde participe en carreras intercolegiales.",
     },
     {
-      title: "Inspiración natural",
-      description: "La belleza de la naturaleza es nuestra fuente de creatividad constante.",
+      title: "Patinaje 🛼",
+      description: "Este deporte es el que mas he practicado, lo he practicado desde que tengo 8 años en escuelas de patinaje y lo practique por muchos años sola para perfeccionar mis habilidades en este.",
     },
     {
-      title: "Diseño conceptual",
-      description: "Detrás de cada proyecto hay una idea poderosa que guía el proceso visual.",
+      title: "Voley 🏐",
+      description: "Este deporte lo practique desde el colegio hasta mi adolescencia en el club deportivo de mi barrio donde tambien entre a torneos en el colegio como en el club.",
+    },
+    {
+      title: "Lectura 📚",
+      description: "Autores que mas me gustan: Gabriel Garcia Marquez, Obra memoria de mis putas tristezas. Antoine de Saint-Exupéry, Obra el principito. Gilraen Eärfalas, Obra desfibrilador",
+    },
+    {
+      title: "Cocina 🍳",
+      description: "Comida peruana:Lomo Saltado, Ceviche, Tallarines verdes, Aji de gallina. Comida Brasilera: Feijoada, Coxinha, Brigadeiro, Churrasco.",
     },
   ];
 
