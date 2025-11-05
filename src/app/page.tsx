@@ -157,6 +157,14 @@ export default function Home() {
         <span className="text-base">{t('trips.paraguay')}</span>
         <span className="text-2xl">🇵🇾</span>
       </li>
+      <li className="flex items-center gap-6">
+        <span className="text-xl">☆</span>
+        <span className="text-base">{t('trips.paraguay')}</span>
+      </li>
+      <li className="flex items-center gap-6">
+        <span className="text-xl">☆</span>
+        <span className="text-base">{t('trips.paraguay')}</span>
+      </li>
     </ul>
 
     <div className="w-[240px] h-[260px] mx-auto md:mx-0">
@@ -315,30 +323,39 @@ export default function Home() {
 
               {/* Hotspots visibles al hover (sobrepuestos) */}
               {/* Facebook */}
-              <a
-                href="https://www.facebook.com/share/19gVBgsuYY/"
-          target="_blank"
-          rel="noopener noreferrer"
-                aria-label="Facebook"
-                title="Facebook - Luna Mideros"
-                className="absolute z-20 flex items-center justify-center cursor-pointer rounded-sm text-xs md:text-sm font-semibold text-black select-none bg-white/80 hover:bg-white transition-colors"
-                style={{ top: '7%', left: '40%', width: '35%', height: '6%' }}
-              >
-                ⇢   ⇠
-              </a>
+              
 
+<a
+  href="https://www.facebook.com/share/19gVBgsuYY/"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Facebook"
+  title="Facebook - Luna Mideros"
+  // Aplicamos 'float-side-rot' para el movimiento del Hotspot (el <a>)
+  className="absolute z-20 flex items-center justify-center cursor-pointer rounded-sm text-xs md:text-sm font-semibold text-black select-none bg-white/80 hover:bg-white transition-colors float-side-rot"
+  style={{ top: '7%', left: '40%', width: '35%', height: '6%' }}
+>
+  {/* Aplicamos 'social-arrow-move' DENTRO del Hotspot (al ⇢ ⇠) */}
+  <span className="social-arrow-move">
+    ⇢   ⇠
+  </span>
+</a>
               {/* Instagram */}
               <a
-                href="https://www.instagram.com/luna.42_?igsh=MTQ1d2w3NWw5ejhrMQ=="
-          target="_blank"
-          rel="noopener noreferrer"
-                aria-label="Instagram"
-                title="Instagram - Luna Mideros"
-                className="absolute z-20 flex items-center justify-center cursor-pointer rounded-sm text-xs md:text-sm font-semibold text-black select-none bg-white/80 hover:bg-white transition-colors"
-                style={{ top: '22%', left: '40%', width: '35%', height: '6%' }}
-              >
-                ⇢   ⇠
-              </a>
+  href="https://www.instagram.com/luna.42_?igsh=MTQ1d2w3NWw5ejhrMQ=="
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Instagram"
+  title="Instagram - Luna Mideros"
+  // Agregamos float-side-rot para el movimiento sutil del hotspot
+  className="absolute z-20 flex items-center justify-center cursor-pointer rounded-sm text-xs md:text-sm font-semibold text-black select-none bg-white/80 hover:bg-white transition-colors float-side-rot"
+  style={{ top: '22%', left: '40%', width: '35%', height: '6%' }}
+>
+  {/* Envolvemos las flechas en un span con la clase para el tamaño, color y animación */}
+  <span className="social-arrow-move">
+    ⇢   ⇠
+  </span>
+</a>
 
               {/* GitHub */}
               <a

@@ -673,5 +673,43 @@ body {
   100% { transform: translateY(-50%) translateX(0); }
 }
 
+/* --- Nuevo CSS para la animación de las flechas de redes sociales --- */
 
+/* Keyframes para el movimiento de las flechas (⇢ ⇠) */
+/* Keyframes para el movimiento de las flechas (⇢ ⇠) */
+@keyframes social-arrow-float {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(3px); /* Mueve las flechas a la derecha */
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
+/* Clase para aplicar la animación a las flechas (flechas grandes azul oscuro) - MODO CLARO */
+/* Clase para aplicar la animación a las flechas (flechas negras y más grandes) */
+.social-arrow-move {
+  display: inline-block;
+  animation: social-arrow-float 1.2s ease-in-out infinite;
+  
+  /* Nuevo tamaño más grande */
+  font-size: 2.8rem !important; 
+  
+  /* Color negro fijo para MODO CLARO */
+  color: #000000 !important;
+}
+
+/* Solución de color para MODO OSCURO: Color negro (o un gris muy oscuro) */
+.dark .social-arrow-move {
+  /* Usamos negro puro o un gris muy oscuro que contraste en el hotspot oscuro */
+  color: #000000 !important; 
+  
+  /* Aseguramos el mismo tamaño en modo oscuro */
+  font-size: 2.8rem !important;
+}
