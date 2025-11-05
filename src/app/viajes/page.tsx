@@ -31,15 +31,15 @@ export default function ViajesPage() {
     },
     {
       title: "Chile",
-      description: "Había una vez una niña muy dulce y amable que vivía en un pequeño pueblo. Su abuela le había hecho una capita roja con capucha, y como la usaba todo el tiempo, todos la llamaban Caperucita Roja. Un día, su mamá le dijo: —Caperucita, tu abuela está enferma. Llévale esta cesta con pan, miel y frutas, pero no te detengas en el camino.",
+      description: "Este fue el tercer pais en el que viajamos en este pais fue en el que mas poco tiempo estuvimos, solo fueron unas cuantas semansa y en este pasi estuvimos viviendo en la ciudad de Arica, en esta ciudad habia montones de Playas a las que ibamos a visitar, el paisaje de estas era hermoso.",
     },
     {
       title: "Paraguay",
-      description: "Había una vez una niña muy dulce y amable que vivía en un pequeño pueblo. Su abuela le había hecho una capita roja con capucha, y como la usaba todo el tiempo, todos la llamaban Caperucita Roja. Un día, su mamá le dijo: —Caperucita, tu abuela está enferma. Llévale esta cesta con pan, miel y frutas, pero no te detengas en el camino.",
+      description: "Este pais fue el cuarto en este vivimos aproximadamente 10 meses en este empece a cursar el sefundo grado de primaria pero no lo acabe, en este pais nosotros viviamos en Ciudad del Este esta fue la ciudad que me parecio mas calurosa era muy impresionante el calor y los grados a los que llegaban pero era increible sus paisajes, culturas, acentos y las personas en si.",
     },
     {
       title: "Brasil",
-      description: "Había una vez una niña muy dulce y amable que vivía en un pequeño pueblo. Su abuela le había hecho una capita roja con capucha, y como la usaba todo el tiempo, todos la llamaban Caperucita Roja. Un día, su mamá le dijo: —Caperucita, tu abuela está enferma. Llévale esta cesta con pan, miel y frutas, pero no te detengas en el camino.",
+      description: "Este pais fue al ultimo que viaje por ahora, este pais me parece el mas maravilloso de todos en este con mis padres vivimos en Sao Paulo durante 8 meses y despues yo volvi a viajar a la edad de 19 años, vivi en la ciudad de Sao Paulo y Brasilia en el que fue una de las mejores experiencias de mi vida en este tiempo conoci demasiado tanto como idioma, cultura, comida, personas, este pais es uno de mis favoritos tiene sus increibles playas que me fascinaron y mi deseo de todo corazon es volver a este pais pronto  .",
     },
   ];
 
