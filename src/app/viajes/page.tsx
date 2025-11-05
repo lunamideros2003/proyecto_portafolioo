@@ -23,11 +23,11 @@ export default function ViajesPage() {
   const texts = [
     {
       title: "Ecuador",
-      description: "Había una vez una niña muy dulce y amable que vivía en un pequeño pueblo. Su abuela le había hecho una capita roja con capucha, y como la usaba todo el tiempo, todos la llamaban Caperucita Roja. Un día, su mamá le dijo: —Caperucita, tu abuela está enferma. Llévale esta cesta con pan, miel y frutas, pero no te detengas en el camino.",
+      description: "Este fue el primer pais al que viaje junto a mis papas fue a la edad aproximadamente de 6 años, estuvimos unos meses recorriendo varias ciudades hasta llegar a la proxima frontera, y despues volvi a viajar para alla a la edad de 21 años y me quede dos meses estuve viviendo en la ciudad de Quito.",
     },
     {
       title: "Peru",
-      description: "Había una vez una niña muy dulce y amable que vivía en un pequeño pueblo. Su abuela le había hecho una capita roja con capucha, y como la usaba todo el tiempo, todos la llamaban Caperucita Roja. Un día, su mamá le dijo: —Caperucita, tu abuela está enferma. Llévale esta cesta con pan, miel y frutas, pero no te detengas en el camino.",
+      description: "Este fue el siguiente pais en el que vivimos, este pais fue en el que mas tiempo vivimos con mi familia, aqui vivimos 1 año aproximadamente y en este estudie primero de primaria en la ciudad de Lima, despues seguimos recorriendo mas ciudades como Tacna y Puno que fueron otras en las que vivimos bastante tiempo.",
     },
     {
       title: "Chile",
