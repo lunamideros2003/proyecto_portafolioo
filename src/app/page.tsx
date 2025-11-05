@@ -179,7 +179,12 @@ export default function Home() {
           <div className="absolute -left-8 top-16 hidden md:block decor-star xs" />
           <div className="absolute left-8 top-24 hidden md:block decor-star xs" />
           <h2 id="hobbies-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black text-3xl">
-            <a href="/pasatiempos" className="inline-block cursor-pointer transition-transform duration-300 hover:text-purple-500 hover:rotate-3 hover:-translate-y-1 hover:scale-110">{t('hobbies.title')}</a>
+          <a
+            href="/pasatiempos"
+             className="inline-block cursor-pointer transition-transform duration-300 float-side hover:text-purple-500 hover:-translate-y-1 hover:scale-110"
+            >
+              {t('hobbies.title')}
+          </a>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-[1fr_260px] gap-8 items-center">
             <ul className="space-y-8 text-black">
