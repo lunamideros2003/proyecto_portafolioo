@@ -591,3 +591,21 @@ body {
   from, to { border-color: transparent; }
   50% { border-color: #000; }
 }
+/* Movimiento suave lado a lado para el título */
+@keyframes float-side {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.float-side {
+  animation: float-side 1.0s ease-in-out infinite;
+}
+
+

@@ -39,7 +39,7 @@ export default function ViajesPage() {
     },
     {
       title: "Brasil",
-      description: "Este pais fue al ultimo que viaje por ahora, este pais me parece el mas maravilloso de todos en este con mis padres vivimos en Sao Paulo durante 8 meses y despues yo volvi a viajar a la edad de 19 años, vivi en la ciudad de Sao Paulo y Brasilia en el que fue una de las mejores experiencias de mi vida en este tiempo conoci demasiado tanto como idioma, cultura, comida, personas, este pais es uno de mis favoritos tiene sus increibles playas que me fascinaron y mi deseo de todo corazon es volver a este pais pronto  .",
+      description: "Este pais fue al ultimo que viaje por ahora, este pais me parece el mas maravilloso de todos en este con mis padres vivimos en Sao Paulo durante 8 meses y despues yo volvi a viajar a la edad de 19 años, vivi en la ciudad de Sao Paulo y Brasilia en el que fue una de las mejores experiencias de mi vida en este tiempo conoci demasiado tanto como idioma, cultura, comida, personas, este pais es uno de mis favoritos tiene sus increibles playas que me fascinaron y mi deseo de todo corazon es volver a este pais pronto.",
     },
   ];
 
