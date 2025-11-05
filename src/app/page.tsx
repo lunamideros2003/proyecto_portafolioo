@@ -332,7 +332,7 @@ export default function Home() {
   aria-label="Facebook"
   title="Facebook - Luna Mideros"
   // Aplicamos 'float-side-rot' para el movimiento del Hotspot (el <a>)
-  className="absolute z-20 flex items-center justify-center cursor-pointer rounded-sm text-xs md:text-sm font-semibold text-black select-none bg-white/80 hover:bg-white transition-colors float-side-rot"
+  className="absolute z-20 flex items-center justify-center cursor-pointer rounded-sm text-xs md:text-sm font-semibold text-black select-none bg-white/00 hover:bg-white transition-colors float-side-rot"
   style={{ top: '7%', left: '40%', width: '35%', height: '6%' }}
 >
   {/* Aplicamos 'social-arrow-move' DENTRO del Hotspot (al ⇢ ⇠) */}
@@ -348,7 +348,7 @@ export default function Home() {
   aria-label="Instagram"
   title="Instagram - Luna Mideros"
   // Agregamos float-side-rot para el movimiento sutil del hotspot
-  className="absolute z-20 flex items-center justify-center cursor-pointer rounded-sm text-xs md:text-sm font-semibold text-black select-none bg-white/80 hover:bg-white transition-colors float-side-rot"
+  className="absolute z-20 flex items-center justify-center cursor-pointer rounded-sm text-xs md:text-sm font-semibold text-black select-none bg-white/00 hover:bg-white transition-colors float-side-rot"
   style={{ top: '22%', left: '40%', width: '35%', height: '6%' }}
 >
   {/* Envolvemos las flechas en un span con la clase para el tamaño, color y animación */}
@@ -359,16 +359,20 @@ export default function Home() {
 
               {/* GitHub */}
               <a
-                href="https://github.com/lunamideros2003"
-          target="_blank"
-          rel="noopener noreferrer"
-                aria-label="GitHub"
-                title="GitHub - Luna Mideros"
-                className="absolute z-20 flex items-center justify-center cursor-pointer rounded-sm text-xs md:text-sm font-semibold text-black select-none bg-white/80 hover:bg-white transition-colors"
-                style={{ top: '37%', left: '40%', width: '35%', height: '6%' }}
-              >
-                ⇢   ⇠
-              </a>
+  href="https://github.com/lunamideros2003"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="GitHub"
+  title="GitHub - Luna Mideros"
+  // 1. Agregamos float-side-rot para el movimiento sutil del hotspot
+  className="absolute z-20 flex items-center justify-center cursor-pointer rounded-sm text-xs md:text-sm font-semibold text-black select-none bg-white/00 hover:bg-white transition-colors float-side-rot"
+  style={{ top: '36%', left: '40%', width: '35%', height: '6%' }}
+>
+  {/* 2. Envolvemos las flechas en un span con la clase para el tamaño, color y animación */}
+  <span className="social-arrow-move">
+    ⇢   ⇠
+  </span>
+</a>
             </div>
           </div>
 
