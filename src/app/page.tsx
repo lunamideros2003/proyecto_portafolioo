@@ -22,16 +22,16 @@ export default function Home() {
         <div className="absolute -right-6 top-16 hidden md:block decor-star sm" />
         <div className="absolute left-12 -bottom-4 hidden md:block decor-star xs" />
         <h2 className="text-center font-semibold tracking-wide mb-8 uppercase text-black text-3xl">{t('cv.title')}</h2>
-        <div className="relative w-62 h-54 rounded-md overflow-hidden border border-black/10 shadow-md">
-        <Image
-            src="/yo.webp"
-            alt="Foto de Luna Gabriela"
-            width={640}
-            height={640}
-            className="w-full h-full object-cover anime-hover"
-          priority
-        />
-        </div>
+        <div className="relative w-62 h-54 rounded-md border border-black/10 shadow-[0_0_55px_20px_rgba(183,123,255,0.55)]">
+            <Image
+             src="/yo.webp"
+             alt="Foto de Luna Gabriela"
+             width={640}
+             height={640}
+             className="w-full h-full object-cover anime-hover rounded-md"
+             priority
+             />
+            </div>
         <section className="bubble bubble-purple w-full text-center px-6 py-4">
           <p className="leading-relaxed text-base">
             {t('cv.description')}
@@ -324,7 +324,7 @@ export default function Home() {
                 className="absolute z-20 flex items-center justify-center cursor-pointer rounded-sm text-xs md:text-sm font-semibold text-black select-none bg-white/80 hover:bg-white transition-colors"
                 style={{ top: '7%', left: '40%', width: '35%', height: '6%' }}
               >
-                Luna Mideros
+                ⇢   ⇠
               </a>
 
               {/* Instagram */}
@@ -337,7 +337,7 @@ export default function Home() {
                 className="absolute z-20 flex items-center justify-center cursor-pointer rounded-sm text-xs md:text-sm font-semibold text-black select-none bg-white/80 hover:bg-white transition-colors"
                 style={{ top: '22%', left: '40%', width: '35%', height: '6%' }}
               >
-                Luna Mideros
+                ⇢   ⇠
               </a>
 
               {/* GitHub */}
@@ -350,7 +350,7 @@ export default function Home() {
                 className="absolute z-20 flex items-center justify-center cursor-pointer rounded-sm text-xs md:text-sm font-semibold text-black select-none bg-white/80 hover:bg-white transition-colors"
                 style={{ top: '37%', left: '40%', width: '35%', height: '6%' }}
               >
-                Luna Mideros
+                ⇢   ⇠
               </a>
             </div>
           </div>
