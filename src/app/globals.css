@@ -591,21 +591,87 @@ body {
   from, to { border-color: transparent; }
   50% { border-color: #000; }
 }
-/* Movimiento suave lado a lado para el título */
-@keyframes float-side {
+/* Movimiento lateral + micro-rotación */
+@keyframes float-side-rot {
   0% {
-    transform: translateX(0);
+    transform: translateX(0) rotate(0deg);
   }
   50% {
-    transform: translateX(6px);
+    transform: translateX(6px) rotate(1.4deg);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(0) rotate(0deg);
   }
 }
 
-.float-side {
-  animation: float-side 1.0s ease-in-out infinite;
+.float-side-rot {
+  animation: float-side-rot 0.7s ease-in-out infinite;
 }
+
+
+/* Burbujitas en hover */
+.title-bubbles {
+  position: relative;
+  display: inline-block;
+}
+
+.title-bubbles:hover::after,
+.title-bubbles:hover::before {
+  content: "•";
+  position: absolute;
+  font-size: 12px;
+  opacity: 0;
+  animation: bubbles-float 0.9s ease-out forwards;
+}
+
+.title-bubbles:hover::before {
+  top: -8px;
+  left: -6px;
+}
+
+.title-bubbles:hover::after {
+  top: -10px;
+  right: -6px;
+}
+
+@keyframes bubbles-float {
+  0% {
+    transform: translateY(0);
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-8px);
+    opacity: 0;
+  }
+}
+/* Flecha decorativa animada para títulos */
+.title-arrow {
+  position: relative;
+  display: inline-block;
+}
+
+/* La flecha */
+.title-arrow::before {
+  content: "➜";              /* Puedes cambiar por → ➤ ➟ como quieras */
+  position: absolute;
+  left: -28px;               /* Distancia desde el texto (ajustable) */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #FFD74F;            /* Amarillo suave */
+  font-size: 1.4rem;         /* Tamaño de la flecha */
+  opacity: 0.95;
+  animation: arrow-wiggle 0.9s ease-in-out infinite;
+}
+
+/* Movimiento suave */
+@keyframes arrow-wiggle {
+  0% { transform: translateY(-50%) translateX(0); }
+  50% { transform: translateY(-50%) translateX(-4px); }
+  100% { transform: translateY(-50%) translateX(0); }
+}
+
 
 
