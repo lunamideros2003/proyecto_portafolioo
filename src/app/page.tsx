@@ -144,7 +144,15 @@ export default function Home() {
     <ul className="space-y-8 text-black">
       <li className="flex items-center gap-6">
         <span className="text-xl">☆</span>
+        <span className="text-base">{t('trips.ecuador')}</span>
+      </li>
+      <li className="flex items-center gap-6">
+        <span className="text-xl">☆</span>
         <span className="text-base">{t('trips.peru')}</span>
+      </li>
+      <li className="flex items-center gap-6">
+        <span className="text-xl">☆</span>
+        <span className="text-base">{t('trips.chile')}</span>
       </li>
       <li className="flex items-center gap-6">
         <span className="text-xl">☆</span>
@@ -153,14 +161,6 @@ export default function Home() {
       <li className="flex items-center gap-6">
         <span className="text-xl">☆</span>
         <span className="text-base">{t('trips.brasil')}</span>
-      </li>
-      <li className="flex items-center gap-6">
-        <span className="text-xl">☆</span>
-        <span className="text-base">{t('trips.paraguay')}</span>
-      </li>
-      <li className="flex items-center gap-6">
-        <span className="text-xl">☆</span>
-        <span className="text-base">{t('trips.paraguay')}</span>
       </li>
     </ul>
 
@@ -227,23 +227,45 @@ export default function Home() {
               <div className="flex items-center gap-6">
                 <span className="text-xl text-blue-400">☆</span>
                 <span className="text-base text-black">{t('projects.messaging')}</span>
-                <div className="w-24 h-16 bg-purple-200 border-2 border-purple-300 flex items-center justify-center">
+                <div className="w-32 h-20 bg-purple-200 border-2 border-purple-300 flex items-center justify-center flex-shrink-0">
                   <span className="text-purple-600 font-bold">X</span>
                 </div>
               </div>
               <div className="flex items-center gap-6">
                 <span className="text-xl text-blue-400">☆</span>
                 <span className="text-base text-black">{t('projects.calculator')}</span>
-                <div className="w-24 h-16 bg-purple-200 border-2 border-purple-300 flex items-center justify-center">
-                  <span className="text-purple-600 font-bold">X</span>
-                </div>
+                <a
+                  href="https://mapsss-ackl.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-32 h-20 bg-purple-200 border-2 border-purple-300 flex items-center justify-center flex-shrink-0 hover:opacity-80 transition-opacity cursor-pointer overflow-hidden rounded"
+                >
+                  <Image
+                    src="/proyectos/proyecto_dos.webp"
+                    alt="Plantilla Mapas"
+                    width={128}
+                    height={80}
+                    className="w-full h-full object-cover"
+                  />
+                </a>
               </div>
               <div className="flex items-center gap-6">
                 <span className="text-xl text-blue-400">☆</span>
                 <span className="text-base text-black">{t('projects.other')}</span>
-                <div className="w-24 h-16 bg-purple-200 border-2 border-purple-300 flex items-center justify-center">
-                  <span className="text-purple-600 font-bold">X</span>
-                </div>
+                <a
+                  href="https://responsive-design-lime-alpha.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-32 h-20 bg-purple-200 border-2 border-purple-300 flex items-center justify-center flex-shrink-0 hover:opacity-80 transition-opacity cursor-pointer overflow-hidden rounded"
+                >
+                  <Image
+                    src="/proyectos/proyecto_tres.webp"
+                    alt="Plantilla Películas"
+                    width={128}
+                    height={80}
+                    className="w-full h-full object-cover"
+                  />
+                </a>
               </div>
             </div>
             <div className="w-[240px] h-[260px] mx-auto md:mx-0">
