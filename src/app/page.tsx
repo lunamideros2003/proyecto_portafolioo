@@ -144,18 +144,15 @@ export default function Home() {
     <ul className="space-y-8 text-black">
       <li className="flex items-center gap-6">
         <span className="text-xl">☆</span>
-        <span className="text-base">{t('trips.brasil')}</span>
-        <span className="text-2xl">🇧🇷</span>
-      </li>
-      <li className="flex items-center gap-6">
-        <span className="text-xl">☆</span>
         <span className="text-base">{t('trips.peru')}</span>
-        <span className="text-2xl">🇵🇪</span>
       </li>
       <li className="flex items-center gap-6">
         <span className="text-xl">☆</span>
         <span className="text-base">{t('trips.paraguay')}</span>
-        <span className="text-2xl">🇵🇾</span>
+      </li>
+      <li className="flex items-center gap-6">
+        <span className="text-xl">☆</span>
+        <span className="text-base">{t('trips.brasil')}</span>
       </li>
       <li className="flex items-center gap-6">
         <span className="text-xl">☆</span>
