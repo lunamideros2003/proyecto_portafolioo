@@ -274,8 +274,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sección: Testimonios */}
-        <section className="w-full pt-20 relative" aria-labelledby="testimonials-title">
+{/* Sección: Testimonios */}
+<section className="w-full pt-20 relative" aria-labelledby="testimonials-title">
           <div className="absolute -left-6 top-8 hidden md:block decor-star xs" />
           <div className="absolute -right-8 top-16 hidden md:block decor-star sm" />
           <div className="absolute left-12 -bottom-4 hidden md:block decor-star xs" />
@@ -299,8 +299,13 @@ export default function Home() {
           <div className="space-y-6">
             {/* Fila 1: Imagen + Texto */}
             <div className="flex items-center gap-6">
-              <div className="w-32 h-20 bg-gray-200 border-2 border-gray-300 flex items-center justify-center flex-shrink-0">
-                <div className="w-8 h-8 border-2 border-gray-400 transform rotate-45"></div>
+              <div className="w-32 h-20 relative flex-shrink-0 overflow-hidden rounded-lg border-2 border-gray-300">
+                <Image
+                  src="/testimonios/testimonio_uno.webp"
+                  alt="Testimonio 1"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="bubble bubble-purple px-4 py-3 text-sm flex-1">
                 <p>{t('testimonials.description')}</p>
@@ -312,15 +317,25 @@ export default function Home() {
               <div className="bubble bubble-purple px-4 py-3 text-sm flex-1">
                 <p>{t('testimonials.description')}</p>
               </div>
-              <div className="w-32 h-20 bg-gray-200 border-2 border-gray-300 flex items-center justify-center flex-shrink-0">
-                <div className="w-8 h-8 border-2 border-gray-400 transform rotate-45"></div>
+              <div className="w-32 h-20 relative flex-shrink-0 overflow-hidden rounded-lg border-2 border-gray-300">
+                <Image
+                  src="/testimonios/testimonio_dos.webp"
+                  alt="Testimonio 2"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
 
             {/* Fila 3: Imagen + Texto */}
             <div className="flex items-center gap-6">
-              <div className="w-32 h-20 bg-gray-200 border-2 border-gray-300 flex items-center justify-center flex-shrink-0">
-                <div className="w-8 h-8 border-2 border-gray-400 transform rotate-45"></div>
+              <div className="w-32 h-20 relative flex-shrink-0 overflow-hidden rounded-lg border-2 border-gray-300">
+                <Image
+                  src="/testimonios/testimonio_tres.webp"
+                  alt="Testimonio 3"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="bubble bubble-purple px-4 py-3 text-sm flex-1">
                 <p>{t('testimonials.description')}</p>
