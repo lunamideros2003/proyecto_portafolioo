@@ -299,7 +299,7 @@ export default function Home() {
           <div className="space-y-6">
             {/* Fila 1: Imagen + Texto */}
             <div className="flex items-center gap-6">
-              <div className="w-32 h-20 relative flex-shrink-0 overflow-hidden rounded-lg border-2 border-gray-300">
+              <div className="w-48 h-32 relative flex-shrink-0 overflow-hidden rounded-lg border-2 border-gray-300">
                 <Image
                   src="/testimonios/testimonio_uno.webp"
                   alt="Testimonio 1"
@@ -317,7 +317,7 @@ export default function Home() {
               <div className="bubble bubble-purple px-4 py-3 text-sm flex-1">
                 <p>{t('testimonials.description')}</p>
               </div>
-              <div className="w-32 h-20 relative flex-shrink-0 overflow-hidden rounded-lg border-2 border-gray-300">
+              <div className="w-48 h-32 relative flex-shrink-0 overflow-hidden rounded-lg border-2 border-gray-300">
                 <Image
                   src="/testimonios/testimonio_dos.webp"
                   alt="Testimonio 2"
@@ -329,7 +329,7 @@ export default function Home() {
 
             {/* Fila 3: Imagen + Texto */}
             <div className="flex items-center gap-6">
-              <div className="w-32 h-20 relative flex-shrink-0 overflow-hidden rounded-lg border-2 border-gray-300">
+              <div className="w-48 h-32 relative flex-shrink-0 overflow-hidden rounded-lg border-2 border-gray-300">
                 <Image
                   src="/testimonios/testimonio_tres.webp"
                   alt="Testimonio 3"
