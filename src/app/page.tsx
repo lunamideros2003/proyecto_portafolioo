@@ -241,6 +241,9 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </a>
+                <div className="relative w-16 h-20">
+                  <span className="social-arrow-move absolute left-0 top-1/2 -translate-y-1/2">←</span>
+                </div>
               </div>
               <div className="flex items-center gap-6">
                 <span className="text-xl text-blue-400">☆</span>
@@ -259,6 +262,9 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </a>
+                <div className="relative w-16 h-20">
+                  <span className="social-arrow-move absolute left-0 top-1/2 -translate-y-1/2">←</span>
+                </div>
               </div>
               <div className="flex items-center gap-6">
                 <span className="text-xl text-blue-400">☆</span>
@@ -277,6 +283,9 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </a>
+                <div className="relative w-16 h-20">
+                  <span className="social-arrow-move absolute left-0 top-1/2 -translate-y-1/2">←</span>
+                </div>
               </div>
             </div>
             <div className="w-[240px] h-[260px] mx-auto md:mx-0">
