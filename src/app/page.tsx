@@ -355,6 +355,9 @@ export default function Home() {
           Es alguien que siempre toma la iniciativa en sus proyectos. Me ha enseñado sobre su carrera y en lo que se basa; he visto varios de sus trabajos, los cuales me parecen increíbles.
           Seguramente será una destacada ingeniera.
         </p>
+        <p className="mt-2">
+          Jonathan David Ruales
+        </p>
       </div>
     </div>
 
