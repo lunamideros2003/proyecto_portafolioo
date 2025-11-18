@@ -33,7 +33,7 @@ export default function Home() {
              />
             </div>
         <section className="bubble bubble-purple w-full text-center px-6 py-4">
-          <p className="leading-relaxed text-base">
+          <p className="leading-relaxed text-black">
             {t('cv.description')}
           </p>
         </section>
@@ -133,6 +133,14 @@ export default function Home() {
   <a
   href="/viajes"
   className="inline-block cursor-pointer transition-transform duration-300 float-side-rot title-arrow hover:text-purple-500 hover:-translate-y-1 hover:scale-110"
+  onClick={() => {
+    const overlay=document.createElement('div');
+    overlay.className='route-loader-overlay';
+    const spinner=document.createElement('div');
+    spinner.className='route-loader';
+    overlay.appendChild(spinner);
+    document.body.appendChild(overlay);
+  }}
 >
   {t('trips.title')}
 </a>
@@ -186,7 +194,15 @@ export default function Home() {
           <h2 id="hobbies-title" className="text-center font-semibold tracking-wide mb-8 uppercase text-black text-3xl">
           <a
              href="/pasatiempos"
-              className="inline-block cursor-pointer transition-transform duration-300 float-side-rot title-arrow hover:text-purple-500 hover:-translate-y-1 hover:scale-110"
+             className="inline-block cursor-pointer transition-transform duration-300 float-side-rot title-arrow hover:text-purple-500 hover:-translate-y-1 hover:scale-110"
+             onClick={() => {
+               const overlay=document.createElement('div');
+               overlay.className='route-loader-overlay';
+               const spinner=document.createElement('div');
+               spinner.className='route-loader';
+               overlay.appendChild(spinner);
+               document.body.appendChild(overlay);
+             }}
             >
                {t('hobbies.title')}
            </a>

@@ -9,7 +9,6 @@ export default function Header() {
   const pathname = usePathname();
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isCVOpen, setIsCVOpen] = useState(false); ////////////////////////////////////
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [isVisible, setIsVisible] = useState(false);
 
@@ -144,9 +143,9 @@ export default function Header() {
           <a
             href="/CV/CV.pdf"
             download
-            className="inline-block px-3 py-2 text-sm md:text-base rounded-md bg-[#e9d5ff] text-[#1a1a1a] shadow-sm border border-black/10 focus:outline-none focus:ring-2 focus:ring-black/20"
+            className="inline-block px-3 py-2 text-sm md:text-base rounded-md bg-[#e9d5ff] text-[#1a1a1a] shadow-sm border border-black/10 focus:outline-none focus:ring-2 focus:ring-black/20 link-black"
           >
-            CV
+            Descargar CV
           </a>
         </div>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import BackButton from "../../components/BackButton";
 import CursorPencilEffect from "../../components/CursorPencilEffect";
 
@@ -75,6 +76,11 @@ export default function PasatiemposPage() {
     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
+  useEffect(() => {
+    const overlay = document.querySelector('.route-loader-overlay');
+    if (overlay) overlay.remove();
+  }, []);
+
   return (
     <>
       <CursorPencilEffect />
@@ -135,11 +141,13 @@ export default function PasatiemposPage() {
                         opacity,
                       }}
                     >
-                      <div className="w-full h-full rounded-[20px] overflow-hidden shadow-2xl">
-                        <img
+                      <div className="w-full h-full rounded-[20px] overflow-hidden shadow-2xl relative">
+                        <Image
                           src={img}
                           alt={`Foto de pasatiempo ${index + 1}`}
-                          className="w-full h-full object-contain"
+                          fill
+                          className="object-contain"
+                          priority={offset === 0}
                         />
                       </div>
                     </div>

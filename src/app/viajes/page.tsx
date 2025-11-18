@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import BackButton from "../../components/BackButton";
 import CursorPencilEffect from "../../components/CursorPencilEffect";
 
@@ -53,6 +54,11 @@ export default function ViajesPage() {
     }, 3500);
     return () => clearInterval(interval);
   }, [images.length]);
+
+  useEffect(() => {
+    const overlay = document.querySelector('.route-loader-overlay');
+    if (overlay) overlay.remove();
+  }, []);
 
   // 🔹 Texto que cambia cada 2 fotos
   const currentText = texts[Math.floor(currentImageIndex / 2) % texts.length];
@@ -126,11 +132,13 @@ export default function ViajesPage() {
                         opacity,
                       }}
                     >
-                      <div className="w-full h-full rounded-[20px] overflow-hidden shadow-2xl">
-                        <img
+                      <div className="w-full h-full rounded-[20px] overflow-hidden shadow-2xl relative">
+                        <Image
                           src={img}
                           alt={`Foto de viaje ${index + 1}`}
-                          className="w-full h-full object-contain"
+                          fill
+                          className="object-contain"
+                          priority={offset === 0}
                         />
                       </div>
                     </div>
