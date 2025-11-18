@@ -358,7 +358,13 @@ export default function Home() {
                 />
               </div>
               <div className="bubble bubble-purple px-4 py-3 text-sm flex-1">
-                <p>{t('testimonials.description')}</p>
+                <p>
+                  Luna es una estudiante inquieta en cuanto al conocimiento, siempre está atenta a todo lo que puede aprender en clase y por su cuenta propia. Tiene la habilidad de compaginarse y comunicarse fácilmente con sus compañeros, lo que le permite además seguir aprendiendo, debatiendo y obteniendo así nuevas experiencias y también algo muy importante como la práctica.
+                </p>
+                <p className="mt-2">
+                  Finalmente comentar que pronto tendré a Luna nuevamente en el aula de clases y seguramente encontraré una persona cada vez más madura, profesional y con ganas de seguir adelante con este importante proyecto de convertirse en una gran ingeniera.
+                </p>
+                <span className="mt-2 block font-semibold">Ingeniero Oscar Andrés Osorio</span>
               </div>
             </div>
         </div>
