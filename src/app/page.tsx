@@ -309,7 +309,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
 {/* Sección: Testimonios */}
 <section className="w-full pt-20 relative" aria-labelledby="testimonials-title">
   <div className="absolute -left-6 top-8 hidden md:block decor-star xs" />
@@ -355,17 +354,30 @@ export default function Home() {
           Es alguien que siempre toma la iniciativa en sus proyectos. Me ha enseñado sobre su carrera y en lo que se basa; he visto varios de sus trabajos, los cuales me parecen increíbles.
           Seguramente será una destacada ingeniera.
         </p>
-        <p className="mt-2">
-          Jonathan David Ruales
-        </p>
+
+        <p className="mt-2">Jonathan David Ruales</p>
       </div>
     </div>
 
     {/* Fila 2: Texto + Imagen */}
     <div className="flex items-center gap-6">
       <div className="bubble bubble-purple px-4 py-3 text-sm flex-1">
-        <p>{t('testimonials.description')}</p>
+        <p>
+          Luna es una persona con una capacidad de observación y análisis que siempre sorprende.
+          Tiene una forma muy creativa de abordar los problemas y siempre busca mejorar, aprender
+          y profundizar en cada tema que le despierta curiosidad. Su forma de trabajar refleja
+          compromiso y disciplina, y la claridad con la que explica su carrera y sus proyectos
+          demuestra lo mucho que domina lo que hace.
+        </p>
+
+        <p className="mt-2">
+          He visto varios de sus trabajos y todos transmiten pasión y profesionalismo, por lo que
+          no tengo duda de que llegará a ser una ingeniera altamente reconocida.
+        </p>
+
+        <p className="mt-2">Yuri Fernanda Trejo</p>
       </div>
+
       <div className="w-48 h-32 relative flex-shrink-0 overflow-hidden rounded-lg border-2 border-gray-300">
         <Image
           src="/testimonios/testimonio_dos.webp"
@@ -386,6 +398,7 @@ export default function Home() {
           className="object-cover"
         />
       </div>
+
       <div className="bubble bubble-purple px-4 py-3 text-sm flex-1">
         <p>
           Luna es una estudiante inquieta en cuanto al conocimiento, siempre está atenta a todo lo que puede aprender en clase y por su cuenta propia. Tiene la habilidad de compaginarse y comunicarse fácilmente con sus compañeros, lo que le permite además seguir aprendiendo, debatiendo y obteniendo así nuevas experiencias y también algo muy importante como la práctica.
@@ -396,8 +409,10 @@ export default function Home() {
         <span className="mt-2 block font-semibold">Ingeniero Oscar Andrés Osorio</span>
       </div>
     </div>
+
   </div>
 </section>
+
 
 
         {/* Sección: Mis redes sociales (última) */}
