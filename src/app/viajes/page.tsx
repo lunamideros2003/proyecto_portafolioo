@@ -88,7 +88,7 @@ export default function ViajesPage() {
           <div className="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
             {/* 🎠 Carrusel */}
             <div className="lg:w-1/2 relative flex flex-col items-center justify-center">
-              <div className="absolute inset-0 bg-[#E6D3F9] rounded-full blur-3xl opacity-40 transform scale-110" />
+              <div className="absolute inset-0 bg-[#E6D3F9] rounded-full blur-3xl opacity-40 transform scale-110 pointer-events-none" />
 
               <div className="relative w-full max-w-xs mx-auto h-[340px]">
                 {images.map((img, index) => {
