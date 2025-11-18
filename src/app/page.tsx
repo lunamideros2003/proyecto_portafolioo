@@ -227,9 +227,20 @@ export default function Home() {
               <div className="flex items-center gap-6">
                 <span className="text-xl text-blue-400">☆</span>
                 <span className="text-base text-black">{t('projects.messaging')}</span>
-                <div className="w-32 h-20 bg-purple-200 border-2 border-purple-300 flex items-center justify-center flex-shrink-0">
-                  <span className="text-purple-600 font-bold">X</span>
-                </div>
+                <a
+                  href="https://calculator-pro5000.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative z-10 w-32 h-20 bg-purple-200 border-2 border-purple-300 flex items-center justify-center flex-shrink-0 hover:opacity-80 transition-opacity cursor-pointer overflow-hidden rounded"
+                >
+                  <Image
+                    src="/proyectos/proyecto_uno.webp"
+                    alt="Calculadora"
+                    width={128}
+                    height={80}
+                    className="w-full h-full object-cover"
+                  />
+                </a>
               </div>
               <div className="flex items-center gap-6">
                 <span className="text-xl text-blue-400">☆</span>
