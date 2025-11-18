@@ -140,45 +140,44 @@ export default function Header() {
             </nav>
           )}
         </div>
-      </div>
-      
-      <div className="mt-2 md:mt-4">
-            <button
+        <div className="mt-2 md:mt-4">
+          <button
             aria-haspopup="menu"
             aria-expanded={isCVOpen}
             onClick={() => setIsCVOpen((o) => !o)}
             onKeyDown={(e) => {
-            if (e.key === "Enter" || e.key === " ") {
+              if (e.key === "Enter" || e.key === " ") {
                 e.preventDefault();
                 setIsCVOpen((o) => !o);
-               }
-             }}
-          className="px-3 py-2 text-sm md:text-base rounded-md bg-[#e9d5ff] text-[#1a1a1a] shadow-sm border border-black/10 focus:outline-none focus:ring-2 focus:ring-black/20"
-         >
-           CV
-         </button>
+              }
+            }}
+            className="px-3 py-2 text-sm md:text-base rounded-md bg-[#e9d5ff] text-[#1a1a1a] shadow-sm border border-black/10 focus:outline-none focus:ring-2 focus:ring-black/20"
+          >
+            CV
+          </button>
           {isCVOpen && (
-              <div
+            <div
               role="menu"
-             className="absolute mt-3 w-48 bubble bubble-purple overflow-hidden"
-              >
-               <a
+              className="absolute mt-3 w-48 bubble bubble-purple overflow-hidden"
+            >
+              <a
                 href="/cv-descargar.pdf"
                 className="w-full text-left block px-3 py-2 hover:bg-black/10"
                 onClick={() => setIsCVOpen(false)}
-               >
-               ⬇️ Descargar PDF
+              >
+                ⬇️ Descargar PDF
               </a>
               <a
-                 href="#seccion-habilidades"
+                href="#seccion-habilidades"
                 className="w-full text-left block px-3 py-2 hover:bg-black/10"
-                  onClick={() => setIsCVOpen(false)}
-                 >
+                onClick={() => setIsCVOpen(false)}
+              >
                 ✨ Habilidades
               </a>
             </div>
-           )}
+          )}
         </div>
+      </div>
 
       {/* Botón de tema (luna) */}
       <div className="relative">
