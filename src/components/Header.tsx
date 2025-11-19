@@ -10,15 +10,25 @@ export default function Header() {
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [isExplicitTheme, setIsExplicitTheme] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   // Ocultar header en páginas de viajes y pasatiempos
   const shouldHideHeader = pathname === "/viajes" || pathname === "/pasatiempos";
 
   useEffect(() => {
-    const storedTheme = (localStorage.getItem("theme") as "light" | "dark") ||
-      (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-    setTheme(storedTheme);
+    const explicit = localStorage.getItem("themeExplicit") === "true";
+    setIsExplicitTheme(explicit);
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+    if (explicit) {
+      const stored = (localStorage.getItem("theme") as "light" | "dark") || (mq.matches ? "dark" : "light");
+      setTheme(stored);
+    } else {
+      setTheme(mq.matches ? "dark" : "light");
+      const listener = (e: MediaQueryListEvent) => setTheme(e.matches ? "dark" : "light");
+      mq.addEventListener("change", listener);
+      return () => mq.removeEventListener("change", listener);
+    }
   }, []);
 
   useEffect(() => {
@@ -40,7 +50,11 @@ export default function Header() {
     return () => clearTimeout(timer);
   }, []);
 
-  const toggleTheme = () => setTheme((t) => (t === "dark" ? "light" : "dark"));
+  const toggleTheme = () => {
+    setIsExplicitTheme(true);
+    localStorage.setItem("themeExplicit", "true");
+    setTheme((t) => (t === "dark" ? "light" : "dark"));
+  };
 
   // No mostrar header en páginas de viajes y pasatiempos
   if (shouldHideHeader) {
