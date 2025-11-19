@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { i18nData } from "../i18n";
 import PlaneIntro from "../components/PlaneIntro";
 import CursorPencilEffect from "../components/CursorPencilEffect";
 import { useEffect, useState } from "react";
@@ -244,7 +245,7 @@ export default function Home() {
                 <span className="text-xl text-blue-400">☆</span>
                 <span className="text-base text-black">{t('projects.messaging')}</span>
                 <a
-                  href="https://calculator-pro5000.vercel.app/"
+                  href={i18nData.links.project_calculator}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="relative z-10 w-32 h-20 bg-purple-200 border-2 border-purple-300 flex items-center justify-center flex-shrink-0 hover:opacity-80 transition-opacity cursor-pointer overflow-hidden rounded"
@@ -265,7 +266,7 @@ export default function Home() {
                 <span className="text-xl text-blue-400">☆</span>
                 <span className="text-base text-black">{t('projects.calculator')}</span>
                 <a
-                  href="https://mapsss-ackl.vercel.app/"
+                  href={i18nData.links.project_maps}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-32 h-20 bg-purple-200 border-2 border-purple-300 flex items-center justify-center flex-shrink-0 hover:opacity-80 transition-opacity cursor-pointer overflow-hidden rounded"
@@ -286,7 +287,7 @@ export default function Home() {
                 <span className="text-xl text-blue-400">☆</span>
                 <span className="text-base text-black">{t('projects.other')}</span>
                 <a
-                  href="https://responsive-design-lime-alpha.vercel.app/"
+                  href={i18nData.links.project_movies}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-32 h-20 bg-purple-200 border-2 border-purple-300 flex items-center justify-center flex-shrink-0 hover:opacity-80 transition-opacity cursor-pointer overflow-hidden rounded"
@@ -408,7 +409,7 @@ export default function Home() {
               
 
 <a
-  href="https://www.facebook.com/share/19gVBgsuYY/"
+  href={i18nData.links.facebook}
   target="_blank"
   rel="noopener noreferrer"
   aria-label="Facebook"
@@ -424,7 +425,7 @@ export default function Home() {
 </a>
               {/* Instagram */}
               <a
-  href="https://www.instagram.com/luna.42_?igsh=MTQ1d2w3NWw5ejhrMQ=="
+  href={i18nData.links.instagram}
   target="_blank"
   rel="noopener noreferrer"
   aria-label="Instagram"
@@ -441,7 +442,7 @@ export default function Home() {
 
               {/* GitHub */}
               <a
-  href="https://github.com/lunamideros2003"
+  href={i18nData.links.github}
   target="_blank"
   rel="noopener noreferrer"
   aria-label="GitHub"

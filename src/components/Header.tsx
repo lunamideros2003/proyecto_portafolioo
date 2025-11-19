@@ -58,6 +58,7 @@ export default function Header() {
         <button
           aria-haspopup="menu"
           aria-expanded={isLangOpen}
+          aria-label={language === 'en' ? 'Change language' : 'Cambiar idioma'}
           onClick={() => setIsLangOpen((o) => !o)}
           onKeyDown={(e) => {
             if (e.key === "Enter" || e.key === " ") {
@@ -101,6 +102,7 @@ export default function Header() {
           <button
             aria-haspopup="menu"
             aria-expanded={isMenuOpen}
+            aria-label={language === 'en' ? 'Open menu' : 'Abrir menú'}
             onClick={() => setIsMenuOpen((o) => !o)}
             onKeyDown={(e) => {
               if (e.key === "Enter" || e.key === " ") {
