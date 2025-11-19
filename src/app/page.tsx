@@ -363,19 +363,14 @@ export default function Home() {
     <div className="flex items-center gap-6">
       <div className="bubble bubble-purple px-4 py-3 text-sm flex-1">
         <p>
-          Luna es una persona con una capacidad de observación y análisis que siempre sorprende.
-          Tiene una forma muy creativa de abordar los problemas y siempre busca mejorar, aprender
-          y profundizar en cada tema que le despierta curiosidad. Su forma de trabajar refleja
-          compromiso y disciplina, y la claridad con la que explica su carrera y sus proyectos
-          demuestra lo mucho que domina lo que hace.
+          La estudiante Luna Gabriela cursó conmigo la asignatura Contexto de la Ingeniería de Software, destacándose de manera sobresaliente durante todo el período académico. Desde el inicio evidenció un compromiso constante con su proceso formativo, participando activamente en cada una de las sesiones y aportando reflexiones pertinentes que enriquecieron la dinámica de la clase. 
         </p>
 
         <p className="mt-2">
-          He visto varios de sus trabajos y todos transmiten pasión y profesionalismo, por lo que
-          no tengo duda de que llegará a ser una ingeniera altamente reconocida.
+          Además, mantuvo un rendimiento académico ejemplar, obteniendo excelentes calificaciones en actividades, evaluaciones y proyectos asignados. Su responsabilidad, respeto y actitud propositiva reflejan un alto nivel de madurez académica y profesional. Considero que Luna Gabriela posee las competencias necesarias para continuar destacándose en su formación como ingeniera de software.
         </p>
 
-        <p className="mt-2">Yuri Fernanda Trejo</p>
+        <p className="mt-2">Ingeniero Daniel Fernando Arteaga</p>
       </div>
 
       <div className="w-48 h-32 relative flex-shrink-0 overflow-hidden rounded-lg border-2 border-gray-300">
