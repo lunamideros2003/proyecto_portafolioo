@@ -65,7 +65,7 @@ export default function PasatiemposPage() {
   };
 
   useEffect(() => {
-    const overlay = document.querySelector('.route-loader-overlay');
+    const overlay = document.querySelector('[data-route-loader]');
     if (overlay) overlay.remove();
   }, []);
 

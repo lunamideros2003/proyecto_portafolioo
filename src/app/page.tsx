@@ -134,14 +134,15 @@ export default function Home() {
   <a
   href="/viajes"
   className="inline-block cursor-pointer transition-transform duration-300 float-side-rot title-arrow hover:text-purple-500 hover:-translate-y-1 hover:scale-110"
-  onClick={() => {
-    const overlay=document.createElement('div');
-    overlay.className='route-loader-overlay';
-    const spinner=document.createElement('div');
-    spinner.className='route-loader';
-    overlay.appendChild(spinner);
-    document.body.appendChild(overlay);
-  }}
+          onClick={() => {
+            const overlay=document.createElement('div');
+            overlay.setAttribute('data-route-loader','true');
+            overlay.className='fixed inset-0 z-[99999] grid place-items-center bg-transparent';
+            const spinner=document.createElement('div');
+            spinner.className='w-14 h-14 rounded-full border-4 border-black border-t-transparent animate-spin';
+            overlay.appendChild(spinner);
+            document.body.appendChild(overlay);
+          }}
 >
   {t('trips.title')}
 </a>
@@ -196,14 +197,15 @@ export default function Home() {
           <a
              href="/pasatiempos"
              className="inline-block cursor-pointer transition-transform duration-300 float-side-rot title-arrow hover:text-purple-500 hover:-translate-y-1 hover:scale-110"
-             onClick={() => {
-               const overlay=document.createElement('div');
-               overlay.className='route-loader-overlay';
-               const spinner=document.createElement('div');
-               spinner.className='route-loader';
-               overlay.appendChild(spinner);
-               document.body.appendChild(overlay);
-             }}
+          onClick={() => {
+            const overlay=document.createElement('div');
+            overlay.setAttribute('data-route-loader','true');
+            overlay.className='fixed inset-0 z-[99999] grid place-items-center bg-transparent';
+            const spinner=document.createElement('div');
+            spinner.className='w-14 h-14 rounded-full border-4 border-black border-t-transparent animate-spin';
+            overlay.appendChild(spinner);
+            document.body.appendChild(overlay);
+          }}
             >
                {t('hobbies.title')}
            </a>
