@@ -24,7 +24,7 @@ export default function Home() {
         <h2 className="text-center font-semibold tracking-wide mb-8 uppercase text-black text-3xl">{t('cv.title')}</h2>
         <div className="relative w-62 h-54 rounded-md border border-black/10 shadow-[0_0_55px_20px_rgba(183,123,255,0.55)]">
             <Image
-             src="/yo.webp"
+             src="/yo.webp?v=2"
              alt="Foto de Luna Gabriela"
              width={640}
              height={640}
@@ -345,32 +345,18 @@ export default function Home() {
       </div>
 
       <div className="bubble bubble-purple px-4 py-3 text-sm flex-1">
-        <p>
-          Luna me parece una persona muy despierta e inteligente; en el tiempo que he podido conocerla siempre se muestra activa y contribuye con pensamientos e ideas innovadoras.
-          Destaca mucho por ser competitiva y es muy receptiva cuando tiene que escuchar sobre un tema que desconoce.
-        </p>
-
-        <p className="mt-2">
-          Es alguien que siempre toma la iniciativa en sus proyectos. Me ha enseñado sobre su carrera y en lo que se basa; he visto varios de sus trabajos, los cuales me parecen increíbles.
-          Seguramente será una destacada ingeniera.
-        </p>
-
-        <p className="mt-2">Jonathan David Ruales</p>
+        <p>{t('testimonials.one.p1')}</p>
+        <p className="mt-2">{t('testimonials.one.p2')}</p>
+        <p className="mt-2">{t('testimonials.one.author')}</p>
       </div>
     </div>
 
     {/* Fila 2: Texto + Imagen */}
     <div className="flex items-center gap-6">
       <div className="bubble bubble-purple px-4 py-3 text-sm flex-1">
-        <p>
-          La estudiante Luna Gabriela cursó conmigo la asignatura Contexto de la Ingeniería de Software, destacándose de manera sobresaliente durante todo el período académico. Desde el inicio evidenció un compromiso constante con su proceso formativo, participando activamente en cada una de las sesiones y aportando reflexiones pertinentes que enriquecieron la dinámica de la clase. 
-        </p>
-
-        <p className="mt-2">
-          Además, mantuvo un rendimiento académico ejemplar, obteniendo excelentes calificaciones en actividades, evaluaciones y proyectos asignados. Su responsabilidad, respeto y actitud propositiva reflejan un alto nivel de madurez académica y profesional. Considero que Luna Gabriela posee las competencias necesarias para continuar destacándose en su formación como ingeniera de software.
-        </p>
-
-        <p className="mt-2">Ingeniero Daniel Fernando Arteaga</p>
+        <p>{t('testimonials.two.p1')}</p>
+        <p className="mt-2">{t('testimonials.two.p2')}</p>
+        <p className="mt-2">{t('testimonials.two.author')}</p>
       </div>
 
       <div className="w-48 h-32 relative flex-shrink-0 overflow-hidden rounded-lg border-2 border-gray-300">
@@ -395,13 +381,9 @@ export default function Home() {
       </div>
 
       <div className="bubble bubble-purple px-4 py-3 text-sm flex-1">
-        <p>
-          Luna es una estudiante inquieta en cuanto al conocimiento, siempre está atenta a todo lo que puede aprender en clase y por su cuenta propia. Tiene la habilidad de compaginarse y comunicarse fácilmente con sus compañeros, lo que le permite además seguir aprendiendo, debatiendo y obteniendo así nuevas experiencias y también algo muy importante como la práctica.
-        </p>
-        <p className="mt-2">
-          Finalmente comentar que pronto tendré a Luna nuevamente en el aula de clases y seguramente encontraré una persona cada vez más madura, profesional y con ganas de seguir adelante con este importante proyecto de convertirse en una gran ingeniera.
-        </p>
-        <span className="mt-2 block font-semibold">Ingeniero Oscar Andrés Osorio</span>
+        <p>{t('testimonials.third.p1')}</p>
+        <p className="mt-2">{t('testimonials.third.p2')}</p>
+        <span className="mt-2 block font-semibold">{t('testimonials.third.author')}</span>
       </div>
     </div>
 

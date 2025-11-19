@@ -4,8 +4,10 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import BackButton from "../../components/BackButton";
 import CursorPencilEffect from "../../components/CursorPencilEffect";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 export default function ViajesPage() {
+  const { language, t } = useLanguage();
   // 🖼️ Lista de 10 imágenes en el orden especificado
   const images = [
     "/viajes/ecuador.webp",
@@ -20,29 +22,21 @@ export default function ViajesPage() {
     "/viajes/brasil_dos.webp",
   ];
 
-  // ✨ Textos que cambiarán cada 2 fotos (5 textos iguales por ahora)
-  const texts = [
-    {
-      title: "Ecuador",
-      description: "Este fue el primer pais al que viaje junto a mis papas fue a la edad aproximadamente de 6 años, estuvimos unos meses recorriendo varias ciudades hasta llegar a la proxima frontera, y despues volvi a viajar para alla a la edad de 21 años y me quede dos meses estuve viviendo en la ciudad de Quito.",
-    },
-    {
-      title: "Peru",
-      description: "Este fue el siguiente pais en el que vivimos, este pais fue en el que mas tiempo vivimos con mi familia, aqui vivimos 1 año aproximadamente y en este estudie primero de primaria en la ciudad de Lima, despues seguimos recorriendo mas ciudades como Tacna y Puno que fueron otras en las que vivimos bastante tiempo.",
-    },
-    {
-      title: "Chile",
-      description: "Este fue el tercer pais en el que viajamos en este pais fue en el que mas poco tiempo estuvimos, solo fueron unas cuantas semansa y en este pasi estuvimos viviendo en la ciudad de Arica, en esta ciudad habia montones de Playas a las que ibamos a visitar, el paisaje de estas era hermoso.",
-    },
-    {
-      title: "Paraguay",
-      description: "Este pais fue el cuarto en este vivimos aproximadamente 10 meses en este empece a cursar el sefundo grado de primaria pero no lo acabe, en este pais nosotros viviamos en Ciudad del Este esta fue la ciudad que me parecio mas calurosa era muy impresionante el calor y los grados a los que llegaban pero era increible sus paisajes, culturas, acentos y las personas en si.",
-    },
-    {
-      title: "Brasil",
-      description: "Este pais fue al ultimo que viaje por ahora, este pais me parece el mas maravilloso de todos en este con mis padres vivimos en Sao Paulo durante 8 meses y despues yo volvi a viajar a la edad de 19 años, vivi en la ciudad de Sao Paulo y Brasilia en el que fue una de las mejores experiencias de mi vida en este tiempo conoci demasiado tanto como idioma, cultura, comida, personas, este pais es uno de mis favoritos tiene sus increibles playas que me fascinaron y mi deseo de todo corazon es volver a este pais pronto.",
-    },
+  const textsEs = [
+    { title: "Ecuador", description: "Este fue el primer país al que viajé con mis papás a los 6 años. Estuvimos meses recorriendo ciudades y volví a los 21 para vivir dos meses en Quito." },
+    { title: "Perú", description: "El país donde vivimos más tiempo, cerca de un año. Estudié primero de primaria en Lima y también vivimos en Tacna y Puno." },
+    { title: "Chile", description: "Tercer país. Estuvimos pocas semanas viviendo en Arica, visitando sus hermosas playas." },
+    { title: "Paraguay", description: "Cuarto país. Vivimos alrededor de 10 meses en Ciudad del Este. Empecé segundo grado allí. Clima muy caluroso y paisajes y cultura increíbles." },
+    { title: "Brasil", description: "El último país por ahora. Vivimos en São Paulo 8 meses y luego regresé a los 19 viviendo en São Paulo y Brasília. Aprendí idioma, cultura y disfruté sus playas; quiero volver pronto." },
   ];
+  const textsEn = [
+    { title: "Ecuador", description: "The first country I traveled to with my parents when I was about 6. We spent months touring cities, and I returned at 21 to live two months in Quito." },
+    { title: "Peru", description: "The country where we lived the longest, about a year. I studied first grade in Lima and we also lived in Tacna and Puno." },
+    { title: "Chile", description: "Third country. We stayed only a few weeks in Arica, visiting its beautiful beaches." },
+    { title: "Paraguay", description: "Fourth country. We lived around 10 months in Ciudad del Este. I started second grade there. Very hot climate, amazing landscapes and culture." },
+    { title: "Brazil", description: "The last country so far. We lived in São Paulo for 8 months; I returned at 19 and lived in São Paulo and Brasília. Learned language and culture; incredible beaches. I wish to go back soon." },
+  ];
+  const texts = language === 'en' ? textsEn : textsEs;
 
   // Estado del índice actual
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -88,7 +82,7 @@ export default function ViajesPage() {
         
         <div className="container mx-auto px-6 pt-20">
           <h1 className="text-center font-semibold tracking-wide uppercase text-black text-3xl mb-12">
-            MIS VIAJES
+            {t('trips.title')}
           </h1>
           
           <div className="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
@@ -135,7 +129,7 @@ export default function ViajesPage() {
                       <div className="w-full h-full rounded-[20px] overflow-hidden shadow-2xl relative">
                         <Image
                           src={img}
-                          alt={`Foto de viaje ${index + 1}`}
+                          alt={language === 'en' ? `Trip photo ${index + 1}` : `Foto de viaje ${index + 1}`}
                           fill
                           className="object-contain"
                           priority={offset === 0}
@@ -151,14 +145,14 @@ export default function ViajesPage() {
                 <button
                   onClick={handlePrev}
                   className="bg-[#D4B9F5] hover:bg-[#C8A6F0] text-white text-xl font-semibold px-5 py-2 rounded-full shadow-md transition-all duration-300 hover:scale-105 active:scale-95"
-                  aria-label="Imagen anterior"
+                  aria-label={language === 'en' ? 'Previous image' : 'Imagen anterior'}
                 >
                   ←
                 </button>
                 <button
                   onClick={handleNext}
                   className="bg-[#D4B9F5] hover:bg-[#C8A6F0] text-white text-xl font-semibold px-5 py-2 rounded-full shadow-md transition-all duration-300 hover:scale-105 active:scale-95"
-                  aria-label="Imagen siguiente"
+                  aria-label={language === 'en' ? 'Next image' : 'Imagen siguiente'}
                 >
                   →
                 </button>

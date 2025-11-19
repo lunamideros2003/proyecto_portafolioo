@@ -4,8 +4,10 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import BackButton from "../../components/BackButton";
 import CursorPencilEffect from "../../components/CursorPencilEffect";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 export default function PasatiemposPage() {
+  const { language, t } = useLanguage();
   // 🖼️ Lista de 6 imágenes en el orden especificado
   const images = [
     "/pasatiempos/futbol.webp",
@@ -18,41 +20,27 @@ export default function PasatiemposPage() {
     "/pasatiempos/cocinar.webp",
   ];
 
-  // 📝 Texto que cambia con cada imagen (usando los primeros 6 textos del código proporcionado)
-  const texts = [
-    {
-      title: "Futbol ⚽",
-      description: "Este es el deporte que mas me encanta, lo he practicado por dos años tanto micro futbol como futbol, lo he entrenado en escuelas, colegios y clubs de entrenamiento.",
-    },
-    {
-      title: "Baloncesto 🏀",
-      description: "Este deporte lo empece a practicar por mi hermana ya que le gustaba mucho y yo la acompañaba a jugar, hasta que le cogi el gusto y lo entrene por 8 meses.",
-    },
-    {
-      title: "Natacion 🤿",
-      description: "Este deporte fue el que menos tiempo practique, lo practique por 4 meses en una escuela donde concursaba en carreras .",
-    },
-    {
-      title: "Atletismo 👟",
-      description: "Este deporte lo practique en mi colegio fue por un año donde participe en carreras intercolegiales.",
-    },
-    {
-      title: "Patinaje 🛼",
-      description: "Este deporte es el que mas he practicado, lo he practicado desde que tengo 8 años en escuelas de patinaje y lo practique por muchos años sola para perfeccionar mis habilidades en este.",
-    },
-    {
-      title: "Voley 🏐",
-      description: "Este deporte lo practique desde el colegio hasta mi adolescencia en el club deportivo de mi barrio donde tambien entre a torneos en el colegio como en el club.",
-    },
-    {
-      title: "Lectura 📚",
-      description: "Autores que mas me gustan: Gabriel Garcia Marquez, Obra memoria de mis putas tristezas. Antoine de Saint-Exupéry, Obra el principito. Gilraen Eärfalas, Obra desfibrilador",
-    },
-    {
-      title: "Cocina 🍳",
-      description: "Comida peruana:Lomo Saltado, Ceviche, Tallarines verdes, Aji de gallina. Comida Brasilera: Feijoada, Coxinha, Brigadeiro, Churrasco.",
-    },
+  const textsEs = [
+    { title: "Fútbol ⚽", description: "Mi deporte favorito. Lo practiqué por dos años, tanto microfútbol como fútbol, en escuelas, colegio y clubes." },
+    { title: "Baloncesto 🏀", description: "Empecé por mi hermana; lo entrené durante unos 8 meses." },
+    { title: "Natación 🤿", description: "El que menos tiempo practiqué: 4 meses en una escuela, compitiendo en carreras." },
+    { title: "Atletismo 👟", description: "Lo practiqué en mi colegio durante un año, participando en carreras intercolegiales." },
+    { title: "Patinaje 🛼", description: "El que más he practicado desde los 8 años, en escuelas y por mi cuenta para perfeccionar habilidades." },
+    { title: "Vóley 🏐", description: "Desde el colegio hasta mi adolescencia, también en el club del barrio y en torneos." },
+    { title: "Lectura 📚", description: "Autores favoritos: Gabriel García Márquez — Memoria de mis putas tristes; Antoine de Saint‑Exupéry — El Principito; Gilraen Eärfalas — Desfibrilador." },
+    { title: "Cocina 🍳", description: "Peruana: Lomo Saltado, Ceviche, Tallarines Verdes, Ají de gallina. Brasilera: Feijoada, Coxinha, Brigadeiro, Churrasco." },
   ];
+  const textsEn = [
+    { title: "Soccer ⚽", description: "My favorite sport. I practiced for two years, futsal and soccer, in schools, high school and clubs." },
+    { title: "Basketball 🏀", description: "I started because of my sister; I trained for about 8 months." },
+    { title: "Swimming 🤿", description: "Practiced for 4 months in a school, competing in races." },
+    { title: "Athletics 👟", description: "Practiced at my school for a year, joining interschool races." },
+    { title: "Skating 🛼", description: "The one I’ve practiced the most since I was 8, in schools and on my own to improve." },
+    { title: "Volleyball 🏐", description: "From school to my neighborhood club, also in tournaments." },
+    { title: "Reading 📚", description: "Favorite authors: Gabriel García Márquez — Memories of My Melancholy Whores; Antoine de Saint‑Exupéry — The Little Prince; Gilraen Eärfalas — Defibrillator." },
+    { title: "Cooking 🍳", description: "Peruvian: Lomo Saltado, Ceviche, Tallarines Verdes, Ají de gallina. Brazilian: Feijoada, Coxinha, Brigadeiro, Churrasco." },
+  ];
+  const texts = language === 'en' ? textsEn : textsEs;
 
   // Estado del índice actual
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -97,7 +85,7 @@ export default function PasatiemposPage() {
         
         <div className="container mx-auto px-6 pt-20">
           <h1 className="text-center font-semibold tracking-wide uppercase text-black text-3xl mb-12">
-            MIS PASATIEMPOS
+            {t('hobbies.title')}
           </h1>
           
           <div className="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
@@ -144,7 +132,7 @@ export default function PasatiemposPage() {
                       <div className="w-full h-full rounded-[20px] overflow-hidden shadow-2xl relative">
                         <Image
                           src={img}
-                          alt={`Foto de pasatiempo ${index + 1}`}
+                          alt={language === 'en' ? `Hobby photo ${index + 1}` : `Foto de pasatiempo ${index + 1}`}
                           fill
                           className="object-contain"
                           priority={offset === 0}
@@ -160,14 +148,14 @@ export default function PasatiemposPage() {
                 <button
                   onClick={handlePrev}
                   className="bg-[#D4B9F5] hover:bg-[#C8A6F0] text-white text-xl font-semibold px-5 py-2 rounded-full shadow-md transition-all duration-300 hover:scale-105 active:scale-95"
-                  aria-label="Imagen anterior"
+                  aria-label={language === 'en' ? 'Previous image' : 'Imagen anterior'}
                 >
                   ←
                 </button>
                 <button
                   onClick={handleNext}
                   className="bg-[#D4B9F5] hover:bg-[#C8A6F0] text-white text-xl font-semibold px-5 py-2 rounded-full shadow-md transition-all duration-300 hover:scale-105 active:scale-95"
-                  aria-label="Imagen siguiente"
+                  aria-label={language === 'en' ? 'Next image' : 'Imagen siguiente'}
                 >
                   →
                 </button>

@@ -53,7 +53,16 @@ const translations = {
     'header.language': 'IDIOMA',
     'header.menu': 'MENÚ',
     'testimonials.title': 'TESTIMONIOS',
-    'testimonials.description': 'la constitucion de colombia esta basada en muchos relatos artisticos como obras de arte y cosas esplendidas del mundo en el cual vamos descubriendo mas cosas nuevas'
+    'testimonials.description': '',
+    'testimonials.one.p1': 'Luna me parece una persona muy despierta e inteligente; en el tiempo que he podido conocerla siempre se muestra activa y contribuye con pensamientos e ideas innovadoras. Destaca mucho por ser competitiva y es muy receptiva cuando tiene que escuchar sobre un tema que desconoce.',
+    'testimonials.one.p2': 'Es alguien que siempre toma la iniciativa en sus proyectos. Me ha enseñado sobre su carrera y en lo que se basa; he visto varios de sus trabajos, los cuales me parecen increíbles. Seguramente será una destacada ingeniera.',
+    'testimonials.one.author': 'Jonathan David Ruales',
+    'testimonials.two.p1': 'La estudiante Luna Gabriela cursó conmigo la asignatura Contexto de la Ingeniería de Software, destacándose de manera sobresaliente durante todo el período académico. Desde el inicio evidenció un compromiso constante con su proceso formativo, participando activamente en cada una de las sesiones y aportando reflexiones pertinentes que enriquecieron la dinámica de la clase.',
+    'testimonials.two.p2': 'Además, mantuvo un rendimiento académico ejemplar, obteniendo excelentes calificaciones en actividades, evaluaciones y proyectos asignados. Su responsabilidad, respeto y actitud propositiva reflejan un alto nivel de madurez académica y profesional. Considero que Luna Gabriela posee las competencias necesarias para continuar destacándose en su formación como ingeniera de software.',
+    'testimonials.two.author': 'Ingeniero Daniel Fernando Arteaga',
+    'testimonials.third.p1': 'Luna es una estudiante inquieta en cuanto al conocimiento; siempre está atenta a todo lo que puede aprender en clase y por su cuenta propia. Se compagina y comunica fácilmente con sus compañeros, lo que le permite seguir aprendiendo, debatiendo y ganando nuevas experiencias y, muy importante, practicando.',
+    'testimonials.third.p2': 'Pronto tendré a Luna nuevamente en el aula y seguramente encontraré a una persona cada vez más madura, profesional y con ganas de seguir adelante con este importante proyecto de convertirse en una gran ingeniera.',
+    'testimonials.third.author': 'Ingeniero Oscar Andrés Osorio'
   },
   en: {
     'cv.title': 'MY RESUME',
@@ -95,7 +104,16 @@ const translations = {
     'header.language': 'LANGUAGE',
     'header.menu': 'MENU',
     'testimonials.title': 'TESTIMONIALS',
-    'testimonials.description': 'The constitution of Colombia is based on many artistic stories such as works of art and splendid things in the world in which we are discovering new things'
+    'testimonials.description': 'The constitution of Colombia is based on many artistic stories such as works of art and splendid things in the world in which we are discovering new things',
+    'testimonials.one.p1': 'Luna seems to me a very bright and intelligent person; from what I have known, she is always active and contributes with innovative ideas. She stands out for being competitive and is very receptive when she needs to learn about a new topic.',
+    'testimonials.one.p2': 'She always takes initiative in her projects. She has taught me about her field and its foundations; I have seen several of her works, which I find incredible. She will surely become an outstanding engineer.',
+    'testimonials.one.author': 'Jonathan David Ruales',
+    'testimonials.two.p1': 'Student Luna Gabriela took the course Context of Software Engineering with me, standing out remarkably throughout the entire academic period. From the beginning she showed constant commitment to her formative process, actively participating in every session and contributing reflections that enriched the dynamics of the class.',
+    'testimonials.two.p2': 'She also maintained exemplary academic performance, obtaining excellent grades in activities, evaluations and assigned projects. Her responsibility, respect and proactive attitude reflect a high level of academic and professional maturity. I consider Luna Gabriela has the necessary competencies to continue excelling in her training as a software engineer.',
+    'testimonials.two.author': 'Engineer Daniel Fernando Arteaga',
+    'testimonials.third.p1': 'Luna is an inquisitive student when it comes to knowledge; she is always attentive to everything she can learn in class and on her own. She easily connects and communicates with her classmates, which allows her to keep learning, debating, gaining new experiences and, very importantly, practicing.',
+    'testimonials.third.p2': 'I will soon have Luna again in the classroom, and I am sure I will find an increasingly mature, professional person, eager to move forward with this important project of becoming a great engineer.',
+    'testimonials.third.author': 'Engineer Oscar Andrés Osorio'
   }
 };
 
