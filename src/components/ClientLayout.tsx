@@ -7,7 +7,6 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   const { language } = useLanguage();
 
   useEffect(() => {
-    // Actualizar el atributo lang del HTML
     document.documentElement.lang = language;
   }, [language]);
 

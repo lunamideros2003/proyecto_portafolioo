@@ -35,7 +35,7 @@ export default function TripsLinkSection() {
           <li className="flex items-center gap-6"><span className="text-xl">☆</span><span className="text-base">{t('trips.brasil')}</span></li>
         </ul>
         <div className="w-[240px] h-[260px] mx-auto md:mx-0">
-          <Image src="/sexto_anime.webp" alt="viajes" width={360} height={380} className="w-full h-full object-contain anime-hover" />
+          <Image src="/sexto_anime.webp" alt="viajes" width={360} height={380} className="w-full h-full object-contain transition-transform duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:saturate-120 dark:hover:brightness-110 dark:hover:contrast-105" />
         </div>
       </div>
     </section>

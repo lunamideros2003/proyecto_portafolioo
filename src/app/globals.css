@@ -1,9 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Replaced @custom-variant with a standard CSS selector */
 .dark {
-  /* dark-mode styles will be applied when .dark class is present */
 }
 
 @theme inline {
@@ -50,7 +48,6 @@ body {
   font-family: "LunaFont", Arial, Helvetica, sans-serif;
 }
 
-/* Fondo de cuadrícula tipo papel */
 .bg-grid {
   background-color: #ffffff !important;
   background-image:
@@ -60,7 +57,6 @@ body {
   background-attachment: fixed;
 }
 
-/* Fondo oscuro para modo dark */
 .dark .bg-grid {
   background-color: #4B4B4B !important;
   background-image:
@@ -75,40 +71,17 @@ body {
   width: 100% !important;
 }
 
-/* Modo oscuro para burbujas de texto */
-.dark .bubble-purple {
-  background-color: #8B5CF6 !important; /* Morado más oscuro */
-  border-color: #7C3AED !important;
-  color: #F3F4F6 !important; /* Texto claro en modo oscuro */
-}
-
-/* Modo oscuro para botones del header */
-.dark .bg-\[#e9d5ff\] {
-  background-color: #6B46C1 !important; /* Morado más oscuro para botones */
-  color: #F3F4F6 !important; /* Texto más claro */
-}
-
-/* Modo oscuro para tags de flecha */
-.dark .tag-arrow {
-  background-color: #6B46C1 !important;
-  color: #F3F4F6 !important;
-  border-color: #7C3AED !important;
-}
-
-/* Modo oscuro para títulos */
 .dark h1,
 .dark h2,
 .dark h3 {
   color: #F3F4F6 !important;
 }
 
-/* Modo oscuro para texto general */
 .dark p,
 .dark span {
   color: #E5E7EB !important;
 }
 
-/* Modo oscuro para enlaces */
 .dark a {
   color: #93C5FD !important;
 }
@@ -117,49 +90,29 @@ body {
   color: #60A5FA !important;
 }
 
-/* Modo oscuro para elementos específicos del portafolio */
-.dark .bubble {
-  background-color: #8B5CF6 !important;
-  color: #F3F4F6 !important;
-}
-
-.dark .bubble-left {
-  background-color: #8B5CF6 !important;
-  color: #F3F4F6 !important;
-}
-
-/* Modo oscuro para texto dentro de burbujas */
-.dark .bubble p,
-.dark .bubble-purple p {
-  color: #F3F4F6 !important;
-}
-
-/* Modo oscuro para texto de descripción */
 .dark [style*="color: #1a1a1a"] {
   color: #F3F4F6 !important;
 }
 
-/* Modo oscuro para imágenes */
 .dark img {
   opacity: 0.9;
 }
 
-.dark .anime-hover {
-  filter: brightness(1.1) contrast(1.05);
+.dark .bg-\[#e9d5ff\] {
+  background-color: #6B46C1 !important;
+  color: #F3F4F6 !important;
 }
 
-/* Modo oscuro para contenedores de imágenes */
 .dark .w-\[180px\]\.h-\[180px\] {
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 0.5rem;
   padding: 0.5rem;
 }
 
-/* Intro overlay del avión */
 .plane-overlay {
   position: fixed;
   inset: 0;
-  background: transparent; /* deja ver la cuadrícula */
+  background: transparent;
   z-index: 9999;
   display: grid;
   place-items: center;
@@ -231,7 +184,6 @@ body {
   }
 }
 
-/* Lluvia de tiritas de papel (estela) */
 .paper-container {
   position: absolute;
   inset: 0;
@@ -269,83 +221,6 @@ body {
   100% { rotate: 18deg; }
 }
 
-/* Burbujas estilo mensaje */
-.bubble {
-  position: relative;
-  border: 1px solid rgba(0,0,0,0.12);
-  border-radius: 14px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-}
-
-.bubble::after {
-  content: "";
-  position: absolute;
-  left: 24px;
-  top: -8px;
-  width: 0; height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid currentColor;
-  filter: drop-shadow(0 -1px 0 rgba(0,0,0,0.12));
-}
-
-.bubble.bubble-panel {
-  background: #ffffff;
-  color: var(--foreground);
-}
-
-.bubble.bubble-panel::after {
-  border-bottom-color: #ffffff;
-}
-
-.bubble.bubble-purple {
-  background: #EAD8F6;
-  color: #1a1a1a;
-}
-
-.bubble.bubble-purple::after {
-  border-bottom-color: #EAD8F6;
-}
-
-/* Variante: cola a la izquierda (para mensajes junto a viñetas) */
-.bubble-left { color: transparent; }
-.bubble-left::after {
-  top: 14px;
-  left: -10px;
-  border-bottom: 10px solid transparent;
-  border-top: 10px solid transparent;
-  border-right: 10px solid currentColor;
-  border-left: none;
-  filter: drop-shadow(-1px 0 0 rgba(0,0,0,0.12));
-}
-.bubble-left.bubble-panel::after { border-right-color: #ffffff; }
-.bubble-left.bubble-purple::after { border-right-color: #EAD8F6; }
-
-/* Etiquetas con flecha (PRIMARIA, BACHILLER, UNIVERSIDAD) */
-.tag-arrow {
-  position: relative;
-  display: inline-block;
-  padding: 8px 22px;
-  background: #ffffff;
-  border: 2px solid rgba(0,0,0,0.55);
-  border-radius: 10px;
-  font-weight: 700;
-}
-
-.tag-arrow::after {
-  content: "";
-  position: absolute;
-  right: -18px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0; height: 0;
-  border-left: 18px solid #ffffff;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  filter: drop-shadow(1px 0 0 rgba(0,0,0,0.55));
-}
-
-/* Fuente local global */
 @font-face {
   font-family: "LunaFont";
   src: url("/font/LunaFont.woff2") format("woff2"),
@@ -433,38 +308,14 @@ body {
     font-family: "Delius", cursive;
   }
   
-  /* Responsive para móvil */
   @media (max-width: 768px) {
     .decor-star {
       display: none !important;
     }
     
-    .bubble {
-      margin: 0 0.5rem;
-      padding: 0.75rem;
-      max-width: calc(100vw - 2rem) !important;
-    }
-    
-    .bubble-purple {
-      margin: 0 0.5rem;
-      padding: 0.75rem;
-      max-width: calc(100vw - 2rem) !important;
-    }
-    
-    .tag-arrow {
-      font-size: 0.75rem;
-      padding: 3px 8px;
-      margin-bottom: 0.5rem;
-    }
-    
-    .typewriter {
-      font-size: 1.25rem;
-    }
-    
-    /* Asegurar que el fondo cubra toda la pantalla en móvil */
     .bg-grid {
       min-height: 100vh !important;
-      min-height: 100dvh !important; /* Dynamic viewport height para móvil */
+      min-height: 100dvh !important;
       width: 100vw !important;
       overflow-x: hidden !important;
     }
@@ -476,7 +327,6 @@ body {
       overflow-x: hidden !important;
     }
     
-    /* Ajustar el layout principal para móvil */
     body {
       overflow-x: hidden !important;
     }
@@ -484,52 +334,12 @@ body {
     html {
       overflow-x: hidden !important;
     }
-    
-    /* Ajustar tamaños de imágenes en móvil */
-    .w-40.h-40 {
-      width: 8rem !important;
-      height: 8rem !important;
-    }
-    
-    /* Ajustar espaciado en móvil */
-    .space-y-10 > * + * {
-      margin-top: 1.5rem !important;
-    }
-    
-    /* Ajustar padding del contenedor principal */
-    .px-4 {
-      padding-left: 0.75rem !important;
-      padding-right: 0.75rem !important;
-    }
   }
   
-  /* Responsive para pantallas muy pequeñas (320px) */
   @media (max-width: 480px) {
-    .bubble {
-      margin: 0 0.25rem;
-      padding: 0.5rem;
-      max-width: calc(100vw - 1rem) !important;
-    }
-    
-    .bubble-purple {
-      margin: 0 0.25rem;
-      padding: 0.5rem;
-      max-width: calc(100vw - 1rem) !important;
-    }
-    
-    .tag-arrow {
-      font-size: 0.625rem;
-      padding: 2px 6px;
-    }
-    
     .w-40.h-40 {
       width: 6rem !important;
       height: 6rem !important;
-    }
-    
-    .px-4 {
-      padding-left: 0.5rem !important;
-      padding-right: 0.5rem !important;
     }
     
     h2 {
@@ -538,7 +348,6 @@ body {
   }
 }
 
-/* Estrella decorativa grande (mis viajes) */
 .decor-star {
   position: absolute;
   width: 160px;
@@ -560,24 +369,12 @@ body {
   to { transform: rotate(360deg); }
 }
 
-/* Efecto hover para imágenes anime */
-.anime-hover {
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.anime-hover:hover {
-  transform: scale(1.05);
-  filter: brightness(1.1) saturate(1.2);
-}
-
-/* Animación sutil para títulos */
 .title-wiggle { position: relative; animation: title-wiggle 3s ease-in-out infinite alternate; }
 @keyframes title-wiggle {
   from { transform: translateX(0); }
   to { transform: translateX(6px); }
 }
 
-/* Efecto de escritura para títulos */
 .typewriter {
   overflow: hidden;
   border-right: 2px solid #000;
@@ -594,7 +391,7 @@ body {
   from, to { border-color: transparent; }
   50% { border-color: #000; }
 }
-/* Movimiento lateral + micro-rotación */
+
 @keyframes float-side-rot {
   0% {
     transform: translateX(0) rotate(0deg);
@@ -611,8 +408,6 @@ body {
   animation: float-side-rot 0.7s ease-in-out infinite;
 }
 
-
-/* Burbujitas en hover */
 .title-bubbles {
   position: relative;
   display: inline-block;
@@ -650,45 +445,39 @@ body {
     opacity: 0;
   }
 }
-/* Loader y utilidades migradas a Tailwind en JSX */
+
 @keyframes spin{to{transform:rotate(360deg)}}
-/* Flecha decorativa animada para títulos */
+
 .title-arrow {
   position: relative;
   display: inline-block;
 }
 
-/* La flecha */
 .title-arrow::before {
-  content: "➜";              /* Puedes cambiar por → ➤ ➟ como quieras */
+  content: "➜";
   position: absolute;
-  left: -28px;               /* Distancia desde el texto (ajustable) */
+  left: -28px;
   top: 50%;
   transform: translateY(-50%);
-  color: #FFD74F;            /* Amarillo suave */
-  font-size: 1.4rem;         /* Tamaño de la flecha */
+  color: #FFD74F;
+  font-size: 1.4rem;
   opacity: 0.95;
   animation: arrow-wiggle 0.9s ease-in-out infinite;
 }
 
-/* Movimiento suave */
 @keyframes arrow-wiggle {
   0% { transform: translateY(-50%) translateX(0); }
   50% { transform: translateY(-50%) translateX(-4px); }
   100% { transform: translateY(-50%) translateX(0); }
 }
 
-/* --- Nuevo CSS para la animación de las flechas de redes sociales --- */
-
-/* Keyframes para el movimiento de las flechas (⇢ ⇠) */
-/* Keyframes para el movimiento de las flechas (⇢ ⇠) */
 @keyframes social-arrow-float {
   0% {
     transform: translateX(0);
     opacity: 1;
   }
   50% {
-    transform: translateX(3px); /* Mueve las flechas a la derecha */
+    transform: translateX(3px);
     opacity: 0.9;
   }
   100% {
@@ -697,24 +486,14 @@ body {
   }
 }
 
-/* Clase para aplicar la animación a las flechas (flechas grandes azul oscuro) - MODO CLARO */
-/* Clase para aplicar la animación a las flechas (flechas negras y más grandes) */
 .social-arrow-move {
   display: inline-block;
   animation: social-arrow-float 1.2s ease-in-out infinite;
-  
-  /* Nuevo tamaño más grande */
-  font-size: 2.8rem !important; 
-  
-  /* Color negro fijo para MODO CLARO */
+  font-size: 2.8rem !important;
   color: #000000 !important;
 }
 
-/* Solución de color para MODO OSCURO: Color negro (o un gris muy oscuro) */
 .dark .social-arrow-move {
-  /* Usamos negro puro o un gris muy oscuro que contraste en el hotspot oscuro */
-  color: #000000 !important; 
-  
-  /* Aseguramos el mismo tamaño en modo oscuro */
+  color: #000000 !important;
   font-size: 2.8rem !important;
 }

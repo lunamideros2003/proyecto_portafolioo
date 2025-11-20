@@ -1,9 +1,7 @@
 "use client";
-import Image from "next/image";
 import PlaneIntro from "../components/PlaneIntro";
 import CursorPencilEffect from "../components/CursorPencilEffect";
 import { useEffect, useState } from "react";
-import { useLanguage } from "../contexts/LanguageContext";
 import CvSection from "../components/sections/CvSection";
 import EducationSection from "../components/sections/EducationSection";
 import ExperienceSection from "../components/sections/ExperienceSection";
@@ -16,7 +14,6 @@ import SocialSection from "../components/sections/SocialSection";
 import Footer from "../components/Footer";
 
 export default function Home() {
-  const { t } = useLanguage();
   const [introDone, setIntroDone] = useState(false);
   useEffect(() => {
     const id = setTimeout(() => setIntroDone(true), 2800);

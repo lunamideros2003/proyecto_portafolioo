@@ -8,7 +8,6 @@ import { useLanguage } from "../../contexts/LanguageContext";
 
 export default function ViajesPage() {
   const { language, t } = useLanguage();
-  // 🖼️ Lista de 10 imágenes en el orden especificado
   const images = [
     "/viajes/ecuador.webp",
     "/viajes/ecuador_dos.webp",
@@ -38,10 +37,8 @@ export default function ViajesPage() {
   ];
   const texts = language === 'en' ? textsEn : textsEs;
 
-  // Estado del índice actual
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Cambia automáticamente la imagen
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
@@ -54,10 +51,8 @@ export default function ViajesPage() {
     if (overlay) overlay.remove();
   }, []);
 
-  // 🔹 Texto que cambia cada 2 fotos
   const currentText = texts[Math.floor(currentImageIndex / 2) % texts.length];
 
-  // Botones manuales
   const handleNext = () => {
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
   };
@@ -71,7 +66,6 @@ export default function ViajesPage() {
       <CursorPencilEffect />
       <BackButton />
       <section className="py-20 relative overflow-hidden min-h-screen">
-        {/* Estrellas decorativas esparcidas por toda la página */}
         <div className="absolute left-[5%] top-[8%] hidden md:block decor-star xs" />
         <div className="absolute right-[8%] top-[15%] hidden md:block decor-star sm" />
         <div className="absolute left-[15%] top-[35%] hidden md:block decor-star xs" />
@@ -86,7 +80,6 @@ export default function ViajesPage() {
           </h1>
           
           <div className="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
-            {/* 🎠 Carrusel */}
             <div className="lg:w-1/2 relative flex flex-col items-center justify-center">
               <div className="absolute inset-0 bg-[#E6D3F9] rounded-full blur-3xl opacity-40 transform scale-110 pointer-events-none" />
 
@@ -140,7 +133,6 @@ export default function ViajesPage() {
                 })}
               </div>
 
-              {/* Botones */}
               <div className="flex items-center justify-center gap-8 mt-6">
                 <button
                   onClick={handlePrev}
@@ -159,7 +151,6 @@ export default function ViajesPage() {
               </div>
             </div>
 
-            {/* 📖 Texto que cambia */}
             <div className="lg:w-1/2 text-center lg:text-left space-y-6 transition-all duration-700 ease-in-out">
               <h2 className="text-4xl font-bold text-gray-800">
                 {currentText.title}

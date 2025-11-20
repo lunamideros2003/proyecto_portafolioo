@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { i18nData, tFor } from '../i18n/index';
+import { tFor } from '../i18n/index';
 
 type Language = 'es' | 'en';
 

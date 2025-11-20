@@ -10,15 +10,12 @@ export default function Header() {
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("light");
-  const [isExplicitTheme, setIsExplicitTheme] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
-  // Ocultar header en páginas de viajes y pasatiempos
   const shouldHideHeader = pathname === "/viajes" || pathname === "/pasatiempos";
 
   useEffect(() => {
     const explicit = localStorage.getItem("themeExplicit") === "true";
-    setIsExplicitTheme(explicit);
     const mq = window.matchMedia("(prefers-color-scheme: dark)");
     if (explicit) {
       const stored = (localStorage.getItem("theme") as "light" | "dark") || (mq.matches ? "dark" : "light");
@@ -42,21 +39,17 @@ export default function Header() {
   }, [theme]);
 
   useEffect(() => {
-    // Mostrar el header después de que termine la animación del avión (2.8 segundos)
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 2800);
-    
     return () => clearTimeout(timer);
   }, []);
 
   const toggleTheme = () => {
-    setIsExplicitTheme(true);
     localStorage.setItem("themeExplicit", "true");
     setTheme((t) => (t === "dark" ? "light" : "dark"));
   };
 
-  // No mostrar header en páginas de viajes y pasatiempos
   if (shouldHideHeader) {
     return null;
   }
@@ -67,7 +60,6 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-40 flex items-start justify-between p-3 md:p-6">
-      {/* Selector de idioma */}
       <div className="relative">
         <button
           aria-haspopup="menu"
@@ -87,11 +79,11 @@ export default function Header() {
           {isLangOpen && (
           <div
             role="menu"
-            className="absolute mt-2 w-48 bubble bubble-purple overflow-hidden"
+            className="absolute mt-2 w-48 relative border border-black/12 rounded-[14px] shadow-[0_4px_12px_rgba(0,0,0,0.06)] bg-[#EAD8F6] text-[#1a1a1a] overflow-hidden dark:bg-[#8B5CF6] dark:border-[#7C3AED] dark:text-[#F3F4F6] after:content-[''] after:absolute after:left-6 after:-top-2 after:w-0 after:h-0 after:border-l-[10px] after:border-l-transparent after:border-r-[10px] after:border-r-transparent after:border-b-[10px] after:border-b-[#EAD8F6] after:drop-shadow-[0_-1px_0_rgba(0,0,0,0.12)] dark:after:border-b-[#8B5CF6]"
           >
             <button
               role="menuitem"
-              className="w-full text-left px-3 py-2 hover:bg-black/10"
+              className="w-full text-left px-3 py-2 hover:bg-black/10 dark:text-[#F3F4F6]"
               onClick={() => {
                 setLanguage("es");
                 setIsLangOpen(false);
@@ -101,7 +93,7 @@ export default function Header() {
             </button>
             <button
               role="menuitem"
-              className="w-full text-left px-3 py-2 hover:bg-black/10"
+              className="w-full text-left px-3 py-2 hover:bg-black/10 dark:text-[#F3F4F6]"
               onClick={() => {
                 setLanguage("en");
                 setIsLangOpen(false);
@@ -111,7 +103,6 @@ export default function Header() {
             </button>
           </div>
         )}
-        {/* Botón de menú debajo del de idioma */}
         <div className="mt-2 md:mt-4">
           <button
             aria-haspopup="menu"
@@ -159,14 +150,13 @@ export default function Header() {
           <a
             href="/CV/CV.pdf"
             download
-            className="inline-block px-3 py-2 text-sm md:text-base rounded-md bg-[#e9d5ff] text-[#1a1a1a] shadow-sm border border-black/10 focus:outline-none focus:ring-2 focus:ring-black/20 link-black"
+            className="inline-block px-3 py-2 text-sm md:text-base rounded-md bg-[#e9d5ff] text-[#1a1a1a] shadow-sm border border-black/10 focus:outline-none focus:ring-2 focus:ring-black/20"
           >
             Descargar CV
           </a>
         </div>
       </div>
 
-      {/* Botón de tema (luna) */}
       <div className="relative">
         <button
           aria-label="Cambiar tema"
@@ -182,7 +172,6 @@ export default function Header() {
         >
           <svg viewBox="0 0 100 100" className="h-10 w-10 md:h-14 md:w-14">
             {theme === "dark" ? (
-              // Icono de sol más bonito para modo oscuro
               <g>
                 <defs>
                   <radialGradient id="sunGradient" cx="50%" cy="50%" r="50%">
@@ -199,7 +188,6 @@ export default function Header() {
                   stroke="#1a1a1a"
                   strokeWidth="2"
                 />
-                {/* Rayos del sol */}
                 <g stroke="#FCD34D" strokeWidth="3" strokeLinecap="round">
                   <line x1="50" y1="10" x2="50" y2="5" />
                   <line x1="70" y1="20" x2="75" y2="15" />
@@ -214,7 +202,6 @@ export default function Header() {
                 </g>
               </g>
             ) : (
-              // Icono de luna creciente más bonito para modo claro
               <g>
                 <defs>
                   <radialGradient id="moonGradient" cx="70%" cy="30%" r="70%">
@@ -238,7 +225,6 @@ export default function Header() {
                   strokeWidth="2"
                   filter="url(#moonGlow)"
                 />
-                {/* Estrellas pequeñas alrededor de la luna */}
                 <g fill="#CBD5E1" opacity="0.8">
                   <circle cx="25" cy="25" r="1.5" />
                   <circle cx="75" cy="20" r="1" />

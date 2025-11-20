@@ -14,7 +14,7 @@ export default function BackButton() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 26 24"
           fill="none"
-          stroke="#000000"   // ← flecha negra fija
+          stroke="#000000"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"

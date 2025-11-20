@@ -12,7 +12,7 @@ export default function AwardsSection() {
       <div className="relative flex items-center justify-center mb-8">
         <h2 id="awards-title" className="text-center font-semibold tracking-wide uppercase text-black text-3xl">{t('awards.title')}</h2>
         <div className="absolute right-6 -top-6 hidden md:block w-25 h-25">
-          <Image src="/quinto_anime.webp" alt="chica con diploma" width={160} height={160} className="w-full h-full object-contain anime-hover" />
+          <Image src="/quinto_anime.webp" alt="chica con diploma" width={160} height={160} className="w-full h-full object-contain transition-transform duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:saturate-120 dark:hover:brightness-110 dark:hover:contrast-105" />
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
@@ -25,8 +25,8 @@ export default function AwardsSection() {
           </div>
         </div>
         <div className="md:col-span-2">
-          <div className="bubble bubble-purple px-4 py-4 text-base leading-relaxed">
-            <p>{t('awards.description')}</p>
+          <div className="relative border border-black/12 rounded-[14px] shadow-[0_4px_12px_rgba(0,0,0,0.06)] bg-[#EAD8F6] text-[#1a1a1a] px-4 py-4 text-base leading-relaxed dark:bg-[#8B5CF6] dark:border-[#7C3AED] dark:text-[#F3F4F6] after:content-[''] after:absolute after:left-6 after:-top-2 after:w-0 after:h-0 after:border-l-[10px] after:border-l-transparent after:border-r-[10px] after:border-r-transparent after:border-b-[10px] after:border-b-[#EAD8F6] after:drop-shadow-[0_-1px_0_rgba(0,0,0,0.12)] dark:after:border-b-[#8B5CF6]">
+            <p className="dark:text-[#F3F4F6]">{t('awards.description')}</p>
           </div>
         </div>
       </div>
